@@ -1,0 +1,149 @@
+@import vars
+.nav
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  height: 100%
+  width: 300px
+  background-color: #ffffff
+  position: fixed
+  top: 0
+  left: 0
+  padding-top: 45px
+  padding-bottom: 40px
+  z-index: 101
+  &__contacts
+    font-family: $armo-display
+    font-size: 18px
+    color: $text-brown-color
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    .tel
+      margin-bottom: 15px
+    .map
+      font-family: $armo-display
+      font-size: 18px
+.burger
+    width: 30px
+    height: 1px
+    background-color: $btn-color-active
+    position: relative
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    cursor: pointer
+    -webkit-transition: all 0.4s
+    -o-transition: all 0.4s
+    transition: all 0.4s
+    &::after,&::before
+      content: ""
+      width: 30px
+      height: 1px
+      background-color: $btn-color-active
+      position: absolute
+      top: 7px
+      left: 0
+      -webkit-transition: all 0.4s
+      -o-transition: all 0.4s
+      transition: all 0.4s
+    &::after
+      top: -7px
+    &-wrapper
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-orient: vertical
+      -webkit-box-direction: normal
+      -ms-flex-direction: column
+      flex-direction: column
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+      -webkit-box-pack: center
+      -ms-flex-pack: center
+      justify-content: center
+      height: 20px
+      cursor: pointer
+      &:hover .burger
+        background-color: transparent
+        -webkit-transition: all 0.4s
+        -o-transition: all 0.4s
+        transition: all 0.4s
+      &:hover .burger::after
+        top: 0
+        -webkit-transform: rotateZ(45deg)
+        -ms-transform: rotate(45deg)
+        transform: rotateZ(45deg)
+        -webkit-transition: all 0.4s
+        -o-transition: all 0.4s
+        transition: all 0.4s
+      &:hover .burger::before
+        top: 0
+        -webkit-transform: rotateZ(-45deg)
+        -ms-transform: rotate(-45deg)
+        transform: rotateZ(-45deg)
+        -webkit-transition: all 0.4s
+        -o-transition: all 0.4s
+        transition: all 0.4s
+      &.js-burger .burger
+        background-color: transparent
+        -webkit-transition: all 0.4s
+        -o-transition: all 0.4s
+        transition: all 0.4s
+      &.js-burger .burger::after
+        top: 0
+        -webkit-transform: rotateZ(45deg)
+        -ms-transform: rotate(45deg)
+        transform: rotateZ(45deg)
+        -webkit-transition: all 0.4s
+        -o-transition: all 0.4s
+        transition: all 0.4s
+      &.js-burger .burger::before
+        top: 0
+        -webkit-transform: rotateZ(-45deg)
+        -ms-transform: rotate(-45deg)
+        transform: rotateZ(-45deg)
+        -webkit-transition: all 0.4s
+        -o-transition: all 0.4s
+        transition: all 0.4s
+.languages
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  margin-top: 42px
+  &__item:nth-child(2n)
+    margin-left: 20px
+  &__item
+    a
+      font-size: 18px
+      font-family: $armo-display
+      color: $text-brown-color
+.small-logo
+  display: none
+.main-menu
+  display: none
+.js-small-nav
+  &.nav
+    width: 150px
+  .nav__logo
+    margin: auto
+  .big-logo
+    display: none
+  .small-logo
+    display: block
+  .nav__contacts
+    display: none
