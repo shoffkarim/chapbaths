@@ -1,11 +1,12 @@
 include ../bemto/bemto.pug
 header.header
-  video.content__video(preload="" autoplay="autoplay" muted="muted" loop="loop" poster="")
-    source(src="" type="video/mp4")
+  //- video.content__video(preload="" autoplay="autoplay" muted="muted" loop="loop" poster="img/main.png")
+  //-   source(src="" type="video/mp4")
+  .photo-poster
   .wrapper
     .header__text-container
       h1.header__tagline Настоящий рай для ценителей традиций и легкого пара!
-      p.header__description Уютные банные домики, оборудованные в лучших традициях русской бани, встречают посетителей ароматом натурального сруба, березовыми дровами, особой атмосферой исконного деревенского парения.
+      p.header__description Уютные банные домики, оборудованные в лучших традициях русской бани,&nbsp;встречают посетителей ароматом натурального сруба, березовыми дровами,&nbsp;особой атмосферой исконного деревенского парения.
     .header__links
-      a.link.header-link Забронировать баню
-      a.link.header-link Календарь мероприятий
+      a.link.header-link.active(href="") Забронировать баню
+      a.link.header-link(href="") Календарь мероприятий

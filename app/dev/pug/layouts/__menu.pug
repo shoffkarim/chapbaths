@@ -1,13 +1,16 @@
 include ../bemto/bemto.pug
-nav.nav
+nav.nav.js-small-nav
   .nav__menu
-    button.burger.js-burger
+    .burger-wrapper
+      span.burger.js-burger
     ul.languages
-      li.languages__item eng
-      li.languages__item 中文
+      li.languages__item
+        a(href="") Eng
+      li.languages__item
+        a(href="") 中文
   .nav__logo
-    img.logo.big-logo(src="", alt="логотип")
-    img.logo.small-logo(src="", alt="логотип")
+    img.logo.big-logo(src="img/big-logo.png", alt="логотип")
+    img.logo.small-logo(src="img/small-logo.png", alt="логотип")
   .nav__contacts
     p.tel +7-343-247-21-07
     button.map Схема проезда
