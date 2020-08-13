@@ -10,27 +10,26 @@
     <title>Чапаевские бани</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="cookie">
-      <div class="wrapper">
-        <p class="cookie__text">Сайт использует файлы «cookie» с целью персонализации сервисов и повышения удобства пользования веб-сайтом.</p>
-        <div class="cookie__buttons">
-          <button class="btn cookie__btn">Согласен</button>
-          <button class="btn cookie__btn">Не согласен</button>
-        </div>
+      <p class="cookie__text">Сайт использует файлы «cookie» с целью персонализации сервисов и повышения удобства пользования веб-сайтом.</p>
+      <div class="cookie__buttons">
+        <button class="btn cookie__btn active">Согласен</button>
+        <button class="btn cookie__btn">Не согласен</button>
       </div>
     </div>
-    <nav class="nav">
+    <nav class="nav js-small-nav">
       <div class="nav__menu">
-        <button class="burger js-burger"></button>
+        <div class="burger-wrapper"><span class="burger js-burger"></span></div>
         <ul class="languages">
-          <li class="languages__item">eng</li>
-          <li class="languages__item">中文</li>
+          <li class="languages__item"><a href="">Eng</a></li>
+          <li class="languages__item"><a href="">中文</a></li>
         </ul>
       </div>
-      <div class="nav__logo"><img class="logo big-logo" src="" alt="логотип"><img class="logo small-logo" src="" alt="логотип"></div>
+      <div class="nav__logo"><img class="logo big-logo" src="img/big-logo.png" alt="логотип"><img class="logo small-logo" src="img/small-logo.png" alt="логотип"></div>
       <div class="nav__contacts">
         <p class="tel">+7-343-247-21-07</p>
         <button class="map">Схема проезда</button>
@@ -89,44 +88,44 @@
       </div>
     </article>
     <header class="header">
-      <video class="content__video" preload="" autoplay="autoplay" muted="muted" loop="loop" poster="">
-        <source src="" type="video/mp4">
-      </video>
+      <div class="photo-poster"></div>
       <div class="wrapper">
         <div class="header__text-container">
           <h1 class="header__tagline">Настоящий рай для ценителей традиций и легкого пара!</h1>
-          <p class="header__description">Уютные банные домики, оборудованные в лучших традициях русской бани, встречают посетителей ароматом натурального сруба, березовыми дровами, особой атмосферой исконного деревенского парения.</p>
+          <p class="header__description">Уютные банные домики, оборудованные в лучших традициях русской бани,&nbsp;встречают посетителей ароматом натурального сруба, березовыми дровами,&nbsp;особой атмосферой исконного деревенского парения.</p>
         </div>
-        <div class="header__links"><a class="link header-link">Забронировать баню</a><a class="link header-link">Календарь мероприятий</a></div>
+        <div class="header__links"><a class="link header-link active" href="">Забронировать баню</a><a class="link header-link" href="">Календарь мероприятий</a></div>
       </div>
     </header>
     <section class="slider-baths">
-      <div class="slider-wrapper">
-        <div class="slide">
-          <div class="slide__img"><img src="" alt="слайд"></div>
-          <h2 class="slide__name">Рыбацкая</h2>
-          <div class="slide__text">
-            <p class="slide__people-count">до 6 человек</p>
-            <p class="slide__desc">Уютная баня, топится исключительно березовыми дровами. В бане иммется гостевая комната с обеденной зоной, теле-радио аппаратура, место для отдыха, парная, помывочная (в помывочной душевая кабина и обливное ведро), сан-узел.</p>
-            <div class="slide__cost">
-              <div class="cost-type">
-                <p class="cost-time">с 08:00 до 16:00</p>
-                <p class="cost-money">от 1600 р/час</p>
-              </div>
-              <div class="cost-type">
-                <p class="cost-time">с 16:00 до 08:00</p>
-                <p class="cost-money">от 2800 р/час</p>
+      <div class="wrapper">
+        <div class="slider-wrapper">
+          <div class="slide">
+            <div class="slide__img"><img src="img/slideer-photo.png" alt="слайд"></div>
+            <h2 class="slide__name">Рыбацкая</h2>
+            <div class="slide__text">
+              <p class="slide__people-count">до 6 человек</p>
+              <p class="slide__desc">Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.</p>
+              <div class="slide__cost">
+                <div class="cost-type">
+                  <p class="cost-time">с 08:00 до 16:00</p>
+                  <p class="cost-money">от 1600 р/час</p>
+                </div>
+                <div class="cost-type">
+                  <p class="cost-time">с 16:00 до 08:00</p>
+                  <p class="cost-money">от 2800 р/час</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="slider-links"><a class="slider-links__time" href="">От 2-х часов</a>
-        <ul class="slider-links-list">
-          <li class="link slider-links-list__item">Бронировать</li>
-          <li class="link slider-links-list__item">подробнее о бане</li>
-          <li class="link slider-links-list__item">Наши веники</li>
-        </ul>
+        <div class="slider-links"><a class="link slider-links__time active" href="">От 2-х часов</a>
+          <ul class="slider-links-list">
+            <li class="slider-links-list__item"><a class="link active" href="">Бронировать</a></li>
+            <li class="slider-links-list__item"><a class="link" href="">Подробнее о бане</a></li>
+            <li class="slider-links-list__item"><a class="link" href="">Наши веники</a></li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="services">
