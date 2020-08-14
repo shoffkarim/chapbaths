@@ -12,14 +12,23 @@ html
   padding-bottom: 13px
   font-size: 21px
   font-family: 'ArnoPro-Display', sans-serif
+  transition: all 0.4s
+  &:hover
+    background-color: $btn-brown-hover
+    transition: all 0.4s
   &.active
     background-color: $btn-color-active
+    transition: all 0.4s
+    &:hover
+      background-color: $btn-active-hover
+      transition: all 0.4s
 .wrapper
   max-width: 1920px
   padding: 0
-  padding-left: 289px
+  padding-left: 139px
   padding-right: 83px
   margin: 0 auto
+  margin-left: 150px
   z-index: 1
 
 
@@ -27,3 +36,4 @@ html
 @import includes/menu
 @import includes/header
 @import includes/slider
+@import includes/services

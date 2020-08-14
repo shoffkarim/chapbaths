@@ -1,0 +1,65 @@
+@import includes/vars
+.services
+  background-color: $bac-color
+  height: 100vh
+  .wrapper
+    margin-left: 0
+    padding-left: 150px
+    padding-right: 0px
+    display: flex
+    flex-direction: row
+    height: 100%
+.service
+  background-repeat: no-repeat
+  background-size: cover
+  width: 50%
+  height: 100%
+  padding-left: 139px
+  padding-right: 130px
+  padding-bottom: 55px
+  position: relative
+  display: flex
+  flex-direction: column
+  transition: all 1s
+  &:hover
+    width: 75%
+    transition: all 1s
+    & .service-menu
+      opacity: 1
+      transition: all 0.4s
+  &__name
+    font-family: $armo-reg
+    font-size: 60px
+    line-height: 64px
+    color: #ffffff
+    text-align: center
+    margin-top: 425px
+  &__desc
+    font-family: $helvetica-neue
+    font-size: 15px
+    line-height: 25px
+    color: #ffffff
+    text-align: center
+    max-width: 320px
+    margin: 0 auto
+    margin-top: 40px
+  &-menu
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-top: auto
+    margin-bottom: 0
+    opacity: 0
+    transition: all 0.4s
+    &__item
+      a
+        font-size: 24px
+        font-family: $armo-display
+        line-height: 32px
+        color: #ffffff
+        padding-top: 15px
+        border-top: 1px solid rgba(255, 255, 255, 0)
+        transition: border-top 0.4s
+        &:hover
+          border-top: 1px solid rgba(255, 255, 255, 0.25)
+          transition: border-top 0.4s
