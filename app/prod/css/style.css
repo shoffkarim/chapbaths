@@ -16,9 +16,6 @@
   font-style: normal;
   font-weight: 300; }
 
-html {
-  overflow-x: hidden; }
-
 .btn, .link {
   display: block;
   background-color: #352a2a;
@@ -440,10 +437,12 @@ html {
     padding-right: 0px;
     height: 100%; }
   .banners-wrapper {
-    position: relative; }
+    position: relative;
+    height: 100%; }
 
 .banner {
-  position: relative; }
+  position: relative;
+  height: 100%; }
   .banner img {
     width: 100%;
     height: 100%;
@@ -505,3 +504,60 @@ html {
     bottom: 0;
     width: 1px;
     height: 1px; }
+
+.photo-gallery {
+  width: 100%;
+  height: 510px;
+  position-left: 150px;
+  position: relative; }
+  .photo-gallery .first-photo {
+    position: absolute;
+    top: 216px;
+    left: 127px; }
+  .photo-gallery .second-photo {
+    position: absolute;
+    top: 138px;
+    left: 385px; }
+  .photo-gallery .third-photo {
+    position: absolute;
+    top: 238px;
+    left: 526px; }
+  .photo-gallery .fouth-photo {
+    position: absolute;
+    top: 95px;
+    left: 950px; }
+  .photo-gallery .sixth-photo {
+    position: absolute;
+    top: 50px;
+    left: 1210px; }
+  .photo-gallery .seventh-photo {
+    position: absolute;
+    top: 257px;
+    right: 216px; }
+  .photo-gallery .eighth-photo {
+    position: absolute;
+    top: 213px;
+    right: 0px; }
+
+.activity-container {
+  position: relative;
+  padding-left: 289px;
+  margin-top: 95px; }
+
+.activity__tagline {
+  font-size: 76px;
+  line-height: 80px;
+  font-family: "ArnoPro-Regular", sans-serif;
+  color: #2d2727;
+  max-width: 740px; }
+
+.activity__desc {
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: #2d2727;
+  max-width: 610px;
+  margin-top: 50px; }
+
+.activity__link {
+  display: inline; }
