@@ -26,6 +26,7 @@
     justify-content: center
     .tel
       margin-bottom: 15px
+      color: #2d2727
     .map
       font-family: $armo-display
       font-size: 18px
@@ -179,6 +180,15 @@
         line-height: 46px
         color: #ffffff
         display: block
+        opacity: 1
+        -webkit-transition: all 0.4s
+        -o-transition: all 0.4s
+        transition: all 0.4s
+        &:hover
+          opacity: 0.7
+          -webkit-transition: all 0.4s
+          -o-transition: all 0.4s
+          transition: all 0.4s
     &__address
       font-family: $helvetica-neue
       font-size: 15px
@@ -196,6 +206,16 @@
         line-height: 28px
         color: #7b6a6a
         margin-bottom: 8px
+        opacity: 1
+        -webkit-transition: all 0.4s
+        -o-transition: all 0.4s
+        transition: all 0.4s
+        &:hover
+          color: #ffffff
+          opacity: 1
+          -webkit-transition: all 0.4s
+          -o-transition: all 0.4s
+          transition: all 0.4s
 .main-menu.js-menu-open
   top: 0
   height: 100%

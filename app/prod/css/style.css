@@ -104,7 +104,8 @@
     align-items: center;
     justify-content: center; }
     .nav__contacts .tel {
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      color: #2d2727; }
     .nav__contacts .map {
       font-family: "ArnoPro-Display", sans-serif;
       font-size: 18px; }
@@ -263,7 +264,16 @@
       font-size: 42px;
       line-height: 46px;
       color: #ffffff;
-      display: block; }
+      display: block;
+      opacity: 1;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+      .main-menu .menu__item a:hover {
+        opacity: 0.7;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s; }
   .main-menu .menu__address {
     font-family: "HelveticaNeueCyr", sans-serif;
     font-size: 15px;
@@ -278,7 +288,17 @@
     font-size: 21px;
     line-height: 28px;
     color: #7b6a6a;
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+    opacity: 1;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s; }
+    .main-menu .submenu__item a:hover {
+      color: #ffffff;
+      opacity: 1;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
 
 .main-menu.js-menu-open {
   top: 0;
@@ -830,7 +850,10 @@
 
 .soc-link {
   padding: 30px;
-  background-color: #352a2a; }
+  background-color: #352a2a;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
   .soc-link img {
     width: 15px;
     height: 100%; }
@@ -840,6 +863,11 @@
   .soc-link.fb {
     border-left: 1px solid rgba(255, 255, 255, 0.05);
     border-right: 1px solid rgba(255, 255, 255, 0.05); }
+  .soc-link:hover {
+    background-color: #3b3030;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
 
 .contacts {
   margin-top: 143px;
@@ -932,3 +960,10 @@
   font-family: 'Verdana';
   text-transform: uppercase;
   margin-top: -2px; }
+
+.dextra:hover .dextra__name {
+  color: #e38027;
+  background-color: #ffffff;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
