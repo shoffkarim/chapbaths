@@ -47,6 +47,12 @@
 .js-body-overflow {
   overflow: hidden; }
 
+.svg-icon svg {
+  width: 754px;
+  position: absolute;
+  top: -145px;
+  right: 328px; }
+
 .cookie {
   background-color: #2d2727;
   padding-top: 22px;
@@ -873,7 +879,8 @@
   margin-top: 143px;
   background-color: #2d2727;
   padding-top: 100px;
-  padding-bottom: 98px; }
+  padding-bottom: 98px;
+  position: relative; }
   .contacts .wrapper {
     display: flex;
     flex-direction: row;

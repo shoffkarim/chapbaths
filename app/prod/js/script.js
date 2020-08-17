@@ -16,6 +16,9 @@ let banner = new Swiper('.banners-container', { //инициализация с�
     nextEl: '.banner-btn.next',
     prevEl: '.banner-btn.prev',
   },
+  autoplay: {
+    delay: 3000,
+  },
 });
 let activity = new Swiper('.activity-slider', { //инициализация свайпера
   loop: true,
