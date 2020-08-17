@@ -668,3 +668,42 @@
   .soc-link.fb {
     border-left: 1px solid rgba(255, 255, 255, 0.05);
     border-right: 1px solid rgba(255, 255, 255, 0.05); }
+
+.contacts {
+  margin-top: 115px;
+  background-color: #2d2727;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .contacts .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; }
+  .contacts__container {
+    margin-top: 100px; }
+  .contacts__heading {
+    font-family: armp-reg;
+    font-size: 76px;
+    line-height: 80px;
+    color: #ffffff;
+    max-width: 730px;
+    margin-bottom: 35px; }
+  .contacts__address {
+    font-family: "HelveticaNeueCyr", sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    color: #ffffff;
+    max-width: 575px;
+    margin-bottom: 45px; }
+  .contacts__number {
+    font-family: "ArnoPro-Regular", sans-serif;
+    font-size: 42px;
+    line-height: 46px;
+    color: #ffffff;
+    margin-bottom: 25px; }
+  .contacts__schedule {
+    font-family: "HelveticaNeueCyr", sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    color: #ffffff;
+    max-width: 575px; }
