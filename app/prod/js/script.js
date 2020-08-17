@@ -1,6 +1,7 @@
-let swiper = new Swiper('.swiper-container', { //инициализация свайпера
+let BathSwiper = new Swiper('.swiper-container', { //инициализация свайпера
   loop: true,
   width: 1290,
+  speed: 600,
   slidesPerView: 1,
   spaceBetween: 40,
   navigation: {
@@ -8,8 +9,15 @@ let swiper = new Swiper('.swiper-container', { //инициализация св
     prevEl: '.swiper-button-prev',
   },
 });
-
-swiper.on('slideChange', function () {
+let banner = new Swiper('.banners-container', { //инициализация свайпера
+  loop: true,
+  speed: 600,
+  navigation: {
+    nextEl: '.banner-btn.next',
+    prevEl: '.banner-btn.prev',
+  },
+});
+BathSwiper.on('slideChange', function () {
   let btnNext = document.querySelector('.bathslider .swiper-button-next'); //поставить в конпки название бань
   let btnPrev = document.querySelector('.bathslider .swiper-button-prev');
   let nextSlide = document.querySelector('.bathslider .swiper-slide-next');
