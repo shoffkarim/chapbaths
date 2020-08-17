@@ -15,8 +15,11 @@ section.activity
       a.link.activity__link.active(href="") Календарь мероприятий
     .activity-slider
       .activity-slide
-        img(src="", alt="alt")
-        p.activity-slide__date 14/02
-        p.activity-slide__name Отмечаем день всех влюбленных
-      a(href="") Назад
-      a(href="") Далее
+        .activity-slide__shadow
+        img(src="img/activity-1.png", alt="мероприятие")
+        .activity-slide__text
+          p.activity-slide__date 14/02
+          p.activity-slide__name Отмечаем день всех влюбленных
+      .activity-slider__btns
+        a.activity-slider__btn(href="") Назад
+        a.activity-slider__btn(href="") Далее
