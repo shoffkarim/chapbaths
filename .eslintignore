@@ -2,3 +2,4 @@ node_modules
 /.git
 bemto
 gulpfile.js
+swiper.min.js
