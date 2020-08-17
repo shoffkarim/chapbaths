@@ -1,21 +1,133 @@
 include ../bemto/bemto.pug
 section.slider-baths
   .wrapper
-    .slider-wrapper
-      .slide
-        .slide__img
-          img(src="img/slideer-photo.png", alt="слайд")
-        h2.slide__name Рыбацкая
-        .slide__text
-          p.slide__people-count до 6 человек
-          p.slide__desc Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.
-          .slide__cost
-            .cost-type
-              p.cost-time с 08:00 до 16:00
-              p.cost-money от 1600 р/час
-            .cost-type
-              p.cost-time с 16:00 до 08:00
-              p.cost-money от 2800 р/час
+    .swiper-container.bathslider
+      .slider__btns
+        button.js-bathsbtn.all-baths Все бани
+        ul.slider-list
+          //- li.slider-list__item Рыбацкая
+          //- li.slider-list__item Охотничья
+          //- li.slider-list__item Сибирская
+          //- li.slider-list__item Чапаевская
+          //- li.slider-list__item Купеческая
+          //- li.slider-list__item Боярская
+          //- li.slider-list__item Царская
+        //- li.slider-list__item Таежная
+      .swiper-wrapper
+        .slide.swiper-slide(data-name="Рыбацкая")
+          .slide__img
+            img(src="img/slideer-photo.png", alt="слайд")
+          h2.slide__name Рыбацкая
+          .slide__text
+            p.slide__people-count до 6 человек
+            p.slide__desc Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.
+            .slide__cost
+              .cost-type
+                p.cost-time с 08:00 до 16:00
+                p.cost-money от 1600 р/час
+              .cost-type
+                p.cost-time с 16:00 до 08:00
+                p.cost-money от 2800 р/час
+        .slide.swiper-slide(data-name="Охотничья")
+          .slide__img
+            img(src="img/slideer-photo.png", alt="слайд")
+          h2.slide__name Рыбацкая
+          .slide__text
+            p.slide__people-count до 6 человек
+            p.slide__desc Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.
+            .slide__cost
+              .cost-type
+                p.cost-time с 08:00 до 16:00
+                p.cost-money от 1600 р/час
+              .cost-type
+                p.cost-time с 16:00 до 08:00
+                p.cost-money от 2800 р/час
+        .slide.swiper-slide(data-name="Сибирская")
+          .slide__img
+            img(src="img/slideer-photo.png", alt="слайд")
+          h2.slide__name Рыбацкая
+          .slide__text
+            p.slide__people-count до 6 человек
+            p.slide__desc Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.
+            .slide__cost
+              .cost-type
+                p.cost-time с 08:00 до 16:00
+                p.cost-money от 1600 р/час
+              .cost-type
+                p.cost-time с 16:00 до 08:00
+                p.cost-money от 2800 р/час
+        .slide.swiper-slide(data-name="Чапаевская")
+          .slide__img
+            img(src="img/slideer-photo.png", alt="слайд")
+          h2.slide__name Рыбацкая
+          .slide__text
+            p.slide__people-count до 6 человек
+            p.slide__desc Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.
+            .slide__cost
+              .cost-type
+                p.cost-time с 08:00 до 16:00
+                p.cost-money от 1600 р/час
+              .cost-type
+                p.cost-time с 16:00 до 08:00
+                p.cost-money от 2800 р/час
+        .slide.swiper-slide(data-name="Купеческая")
+          .slide__img
+            img(src="img/slideer-photo.png", alt="слайд")
+          h2.slide__name Рыбацкая
+          .slide__text
+            p.slide__people-count до 6 человек
+            p.slide__desc Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.
+            .slide__cost
+              .cost-type
+                p.cost-time с 08:00 до 16:00
+                p.cost-money от 1600 р/час
+              .cost-type
+                p.cost-time с 16:00 до 08:00
+                p.cost-money от 2800 р/час
+        .slide.swiper-slide(data-name="Боярская")
+          .slide__img
+            img(src="img/slideer-photo.png", alt="слайд")
+          h2.slide__name Рыбацкая
+          .slide__text
+            p.slide__people-count до 6 человек
+            p.slide__desc Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.
+            .slide__cost
+              .cost-type
+                p.cost-time с 08:00 до 16:00
+                p.cost-money от 1600 р/час
+              .cost-type
+                p.cost-time с 16:00 до 08:00
+                p.cost-money от 2800 р/час
+        .slide.swiper-slide(data-name="Царская")
+          .slide__img
+            img(src="img/slideer-photo.png", alt="слайд")
+          h2.slide__name Рыбацкая
+          .slide__text
+            p.slide__people-count до 6 человек
+            p.slide__desc Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.
+            .slide__cost
+              .cost-type
+                p.cost-time с 08:00 до 16:00
+                p.cost-money от 1600 р/час
+              .cost-type
+                p.cost-time с 16:00 до 08:00
+                p.cost-money от 2800 р/час
+        .slide.swiper-slide(data-name="Таежная")
+          .slide__img
+            img(src="img/slideer-photo.png", alt="слайд")
+          h2.slide__name Рыбацкая
+          .slide__text
+            p.slide__people-count до 6 человек
+            p.slide__desc Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.
+            .slide__cost
+              .cost-type
+                p.cost-time с 08:00 до 16:00
+                p.cost-money от 1600 р/час
+              .cost-type
+                p.cost-time с 16:00 до 08:00
+                p.cost-money от 2800 р/час
+      .swiper-button-next Охотничья
+      .swiper-button-prev Таежная
     .slider-links
       a.link.slider-links__time.active(href="") От 2-х часов
       ul.slider-links-list

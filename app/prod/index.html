@@ -11,6 +11,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -99,25 +100,159 @@
     </header>
     <section class="slider-baths">
       <div class="wrapper">
-        <div class="slider-wrapper">
-          <div class="slide">
-            <div class="slide__img"><img src="img/slideer-photo.png" alt="слайд"></div>
-            <h2 class="slide__name">Рыбацкая</h2>
-            <div class="slide__text">
-              <p class="slide__people-count">до 6 человек</p>
-              <p class="slide__desc">Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.</p>
-              <div class="slide__cost">
-                <div class="cost-type">
-                  <p class="cost-time">с 08:00 до 16:00</p>
-                  <p class="cost-money">от 1600 р/час</p>
+        <div class="swiper-container bathslider">
+          <div class="slider__btns">
+            <button class="js-bathsbtn all-baths">Все бани</button>
+            <ul class="slider-list"></ul>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="slide swiper-slide" data-name="Рыбацкая">
+              <div class="slide__img"><img src="img/slideer-photo.png" alt="слайд"></div>
+              <h2 class="slide__name">Рыбацкая</h2>
+              <div class="slide__text">
+                <p class="slide__people-count">до 6 человек</p>
+                <p class="slide__desc">Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.</p>
+                <div class="slide__cost">
+                  <div class="cost-type">
+                    <p class="cost-time">с 08:00 до 16:00</p>
+                    <p class="cost-money">от 1600 р/час</p>
+                  </div>
+                  <div class="cost-type">
+                    <p class="cost-time">с 16:00 до 08:00</p>
+                    <p class="cost-money">от 2800 р/час</p>
+                  </div>
                 </div>
-                <div class="cost-type">
-                  <p class="cost-time">с 16:00 до 08:00</p>
-                  <p class="cost-money">от 2800 р/час</p>
+              </div>
+            </div>
+            <div class="slide swiper-slide" data-name="Охотничья">
+              <div class="slide__img"><img src="img/slideer-photo.png" alt="слайд"></div>
+              <h2 class="slide__name">Рыбацкая</h2>
+              <div class="slide__text">
+                <p class="slide__people-count">до 6 человек</p>
+                <p class="slide__desc">Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.</p>
+                <div class="slide__cost">
+                  <div class="cost-type">
+                    <p class="cost-time">с 08:00 до 16:00</p>
+                    <p class="cost-money">от 1600 р/час</p>
+                  </div>
+                  <div class="cost-type">
+                    <p class="cost-time">с 16:00 до 08:00</p>
+                    <p class="cost-money">от 2800 р/час</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide swiper-slide" data-name="Сибирская">
+              <div class="slide__img"><img src="img/slideer-photo.png" alt="слайд"></div>
+              <h2 class="slide__name">Рыбацкая</h2>
+              <div class="slide__text">
+                <p class="slide__people-count">до 6 человек</p>
+                <p class="slide__desc">Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.</p>
+                <div class="slide__cost">
+                  <div class="cost-type">
+                    <p class="cost-time">с 08:00 до 16:00</p>
+                    <p class="cost-money">от 1600 р/час</p>
+                  </div>
+                  <div class="cost-type">
+                    <p class="cost-time">с 16:00 до 08:00</p>
+                    <p class="cost-money">от 2800 р/час</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide swiper-slide" data-name="Чапаевская">
+              <div class="slide__img"><img src="img/slideer-photo.png" alt="слайд"></div>
+              <h2 class="slide__name">Рыбацкая</h2>
+              <div class="slide__text">
+                <p class="slide__people-count">до 6 человек</p>
+                <p class="slide__desc">Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.</p>
+                <div class="slide__cost">
+                  <div class="cost-type">
+                    <p class="cost-time">с 08:00 до 16:00</p>
+                    <p class="cost-money">от 1600 р/час</p>
+                  </div>
+                  <div class="cost-type">
+                    <p class="cost-time">с 16:00 до 08:00</p>
+                    <p class="cost-money">от 2800 р/час</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide swiper-slide" data-name="Купеческая">
+              <div class="slide__img"><img src="img/slideer-photo.png" alt="слайд"></div>
+              <h2 class="slide__name">Рыбацкая</h2>
+              <div class="slide__text">
+                <p class="slide__people-count">до 6 человек</p>
+                <p class="slide__desc">Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.</p>
+                <div class="slide__cost">
+                  <div class="cost-type">
+                    <p class="cost-time">с 08:00 до 16:00</p>
+                    <p class="cost-money">от 1600 р/час</p>
+                  </div>
+                  <div class="cost-type">
+                    <p class="cost-time">с 16:00 до 08:00</p>
+                    <p class="cost-money">от 2800 р/час</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide swiper-slide" data-name="Боярская">
+              <div class="slide__img"><img src="img/slideer-photo.png" alt="слайд"></div>
+              <h2 class="slide__name">Рыбацкая</h2>
+              <div class="slide__text">
+                <p class="slide__people-count">до 6 человек</p>
+                <p class="slide__desc">Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.</p>
+                <div class="slide__cost">
+                  <div class="cost-type">
+                    <p class="cost-time">с 08:00 до 16:00</p>
+                    <p class="cost-money">от 1600 р/час</p>
+                  </div>
+                  <div class="cost-type">
+                    <p class="cost-time">с 16:00 до 08:00</p>
+                    <p class="cost-money">от 2800 р/час</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide swiper-slide" data-name="Царская">
+              <div class="slide__img"><img src="img/slideer-photo.png" alt="слайд"></div>
+              <h2 class="slide__name">Рыбацкая</h2>
+              <div class="slide__text">
+                <p class="slide__people-count">до 6 человек</p>
+                <p class="slide__desc">Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.</p>
+                <div class="slide__cost">
+                  <div class="cost-type">
+                    <p class="cost-time">с 08:00 до 16:00</p>
+                    <p class="cost-money">от 1600 р/час</p>
+                  </div>
+                  <div class="cost-type">
+                    <p class="cost-time">с 16:00 до 08:00</p>
+                    <p class="cost-money">от 2800 р/час</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide swiper-slide" data-name="Таежная">
+              <div class="slide__img"><img src="img/slideer-photo.png" alt="слайд"></div>
+              <h2 class="slide__name">Рыбацкая</h2>
+              <div class="slide__text">
+                <p class="slide__people-count">до 6 человек</p>
+                <p class="slide__desc">Уютная баня, топится исключительно березовыми дровами. В&nbsp;бане иммется гостевая комната с обеденной зоной, теле&#8209;радио аппаратура, место для отдыха, парная, помывочная&nbsp;(в&nbsp;помывочной душевая кабина и обливное ведро), сан-узел.</p>
+                <div class="slide__cost">
+                  <div class="cost-type">
+                    <p class="cost-time">с 08:00 до 16:00</p>
+                    <p class="cost-money">от 1600 р/час</p>
+                  </div>
+                  <div class="cost-type">
+                    <p class="cost-time">с 16:00 до 08:00</p>
+                    <p class="cost-money">от 2800 р/час</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="swiper-button-next">Охотничья</div>
+          <div class="swiper-button-prev">Таежная</div>
         </div>
         <div class="slider-links"><a class="link slider-links__time active" href="">От 2-х часов</a>
           <ul class="slider-links-list">
@@ -222,5 +357,7 @@
           <div class="dextra"><span class="dextra__name">DEXTRA</span><span class="dextra__job">разработка<br>сайта</span></div></a>
       </div>
     </footer>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

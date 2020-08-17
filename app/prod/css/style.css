@@ -327,13 +327,17 @@
 
 .slider-baths {
   background-color: #2d2727; }
+  .slider-baths .wrapper {
+    padding-right: 0px;
+    padding-left: 0px; }
   .slider-baths .slide {
     position: relative;
     max-width: 1290px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start; }
+    align-items: flex-start;
+    margin-left: 70px; }
     .slider-baths .slide__name {
       font-size: 130px;
       color: #ffffff;
@@ -390,7 +394,7 @@
 
 .slider-links {
   margin-top: 80px;
-  margin-left: 16px;
+  margin-left: 157px;
   display: flex;
   flex-direction: row; }
   .slider-links-list {
@@ -403,6 +407,92 @@
     padding: 30px 63px;
     margin-right: 160px;
     padding-bottom: 25px; }
+
+.swiper-button-next, .swiper-button-prev {
+  top: 57px;
+  color: #ffffff;
+  font-family: "ArnoPro-Display", sans-serif;
+  font-size: 21px;
+  width: auto; }
+  .swiper-button-next::before, .swiper-button-prev::before {
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.25);
+    position: absolute;
+    top: 20px;
+    right: 0; }
+  .swiper-button-next::after, .swiper-button-prev::after {
+    display: none; }
+
+.swiper-button-next {
+  margin-right: 0;
+  right: 0;
+  padding-right: 60px; }
+
+.swiper-button-prev {
+  padding-left: 60px;
+  left: 0px; }
+  .swiper-button-prev::before {
+    left: 0;
+    right: auto; }
+
+.slider-list {
+  padding: 45px 50px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: min-content;
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 85px);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s, visibility 0.8s, top 0.8s; }
+  .slider-list__item {
+    font-family: "ArnoPro-Display", sans-serif;
+    font-size: 21px;
+    line-height: 27px;
+    color: #2d2727;
+    margin-bottom: 8px; }
+
+.slider__btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 45px;
+  position: relative;
+  margin-bottom: 85px; }
+  .slider__btns:hover .slider-list, .slider__btns:active .slider-list, .slider__btns:focus .slider-list {
+    opacity: 1;
+    visibility: visible;
+    top: 85px;
+    transition: opacity 0.8s, visibility 0.8s, top 0.8s; }
+
+.all-baths {
+  font-family: "ArnoPro-Display", sans-serif;
+  font-size: 21px;
+  color: #7b6a6a;
+  position: relative;
+  padding-left: 60px;
+  padding-right: 60px; }
+  .all-baths::after, .all-baths::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 11px;
+    left: 0; }
+  .all-baths::after {
+    right: 0;
+    left: auto; }
 
 .services {
   background-color: #2d2727;

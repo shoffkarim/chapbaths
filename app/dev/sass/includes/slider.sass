@@ -2,6 +2,9 @@
 
 .slider-baths
   background-color: $bac-color
+  .wrapper
+    padding-right: 0px
+    padding-left: 0px
   .slide
     position: relative
     max-width: 1290px
@@ -9,6 +12,7 @@
     flex-direction: row
     justify-content: space-between
     align-items: flex-start
+    margin-left: 70px
     &__name
       font-size: 130px
       color: #ffffff
@@ -65,7 +69,7 @@
         font-family: $armo-display
 .slider-links
   margin-top: 80px
-  margin-left: 16px
+  margin-left: 157px
   display: flex
   flex-direction: row
   &-list
@@ -79,3 +83,83 @@
     padding: 30px 63px
     margin-right: 160px
     padding-bottom: 25px
+.swiper-button-next, .swiper-button-prev
+  top: 57px
+  color: #ffffff
+  font-family: $armo-display
+  font-size: 21px
+  width: auto
+  &::before
+    content: ""
+    width: 50px
+    height: 1px
+    background-color: rgba(255, 255, 255, 0.25)
+    position: absolute
+    top: 20px
+    right: 0
+  &::after
+    display: none
+.swiper-button-next
+  margin-right: 0
+  right: 0
+  padding-right: 60px
+.swiper-button-prev
+  padding-left: 60px
+  left: 0px
+  &::before
+    left: 0
+    right: auto
+.slider-list
+  padding: 45px 50px
+  padding-bottom: 30px
+  background-color: #ffffff
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
+  width: min-content
+  position: absolute
+  top: 50px
+  left: calc(50% - 85px)
+  z-index: 100
+  opacity: 0
+  visibility: hidden
+  transition: opacity 0.8s, visibility 0.8s, top 0.8s
+  &__item
+    font-family: $armo-display
+    font-size: 21px
+    line-height: 27px
+    color: #2d2727
+    margin-bottom: 8px
+.slider__btns
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding-top: 45px
+  position: relative
+  margin-bottom: 85px
+  &:hover .slider-list, &:active .slider-list, &:focus .slider-list
+    opacity: 1
+    visibility: visible
+    top: 85px
+    transition: opacity 0.8s, visibility 0.8s, top 0.8s
+.all-baths
+  font-family: $armo-display
+  font-size: 21px
+  color: #7b6a6a
+  position: relative
+  padding-left: 60px
+  padding-right: 60px
+  &::after, &::before
+    content: ""
+    display: block
+    width: 50px
+    height: 1px
+    background-color: rgba(255, 255, 255, 0.1)
+    position: absolute
+    top: 11px
+    left: 0
+  &::after
+    right: 0
+    left: auto
