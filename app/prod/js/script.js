@@ -21,7 +21,7 @@ swiper.on('slideChange', function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
   if(document.querySelector('.bathslider')){ //вывод списка названий бань
-    let sliderList = document.querySelectorAll(".slider-baths .slide");
+    let sliderList = document.querySelectorAll('.slider-baths .slide');
     let dataArray = [];
     let blockList = document.querySelector(".slider-list");
     sliderList.forEach(function (i) {
@@ -45,7 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
     btnPrev.innerHTML = nextPrev.getAttribute('data-name');
   }
 });
-
+window.addEventListener('scroll', function () { //изменение размера бокового меню
+  let nav = document.querySelector('.nav');
+  if (pageYOffset > 400) {
+    nav.classList.add('js-small-nav');
+  } else {
+    nav.classList.remove('js-small-nav');
+  }
+})
 function uniqueArray(arr) { //функция удаления одинаковых элементов из массива
   let res = []
   for (let str of arr) {
@@ -55,3 +62,15 @@ function uniqueArray(arr) { //функция удаления одинаковы
   }
   return res
 }
+
+document.querySelector('.burger-wrapper').addEventListener('click', function () { //открытие главного меню
+  let btn = document.querySelector('.burger-wrapper');
+  let nav = document.querySelector('.nav');
+  let menu = document.querySelector('.js-menu');
+  let body = document.querySelector('body');
+  btn.classList.toggle('js-burger')
+  menu.classList.toggle('js-menu-open');
+  body.classList.toggle('js-body-overflow');
+  nav.classList.remove('js-small-nav');
+
+})
