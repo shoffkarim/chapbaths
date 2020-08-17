@@ -2,7 +2,8 @@ include ../bemto/bemto.pug
 section.services
   .wrapper
     .service(style="background-image:url('img/service-1.png')")
-      h2.service__name Оздоровительные процедуры и косметика
+      .service__text
+        h2.service__name Оздоровительные процедуры и косметика
       ul.service-menu
         li.service-menu__item
           a(href="") Массаж
@@ -13,8 +14,9 @@ section.services
         li.service-menu__item
           a(href="") Органическая косметика
     .service(style="background-image:url('img/service-2.png')")
-      h2.service__name Настоящая <br> русская кухня
-      p.service__desc Из ресторана, расположенного в отеле Пале&nbsp;Рояль.
+      .service__text
+        h2.service__name Настоящая <br> русская кухня
+        p.service__desc Из ресторана, расположенного в отеле Пале&nbsp;Рояль.
       ul.service-menu
         li.service-menu__item
           a(href="") Массаж
