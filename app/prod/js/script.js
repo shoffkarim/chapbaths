@@ -17,6 +17,18 @@ let banner = new Swiper('.banners-container', { //инициализация с�
     prevEl: '.banner-btn.prev',
   },
 });
+let activity = new Swiper('.activity-slider', { //инициализация свайпера
+  loop: true,
+  speed: 600,
+  spaceBetween: 38,
+  navigation: {
+    nextEl: '.activity-slider__btn.next',
+    prevEl: '.activity-slider__btn.prev',
+  },
+  autoplay: {
+    delay: 3000,
+  },
+});
 BathSwiper.on('slideChange', function () {
   let btnNext = document.querySelector('.bathslider .swiper-button-next'); //поставить в конпки название бань
   let btnPrev = document.querySelector('.bathslider .swiper-button-prev');
@@ -91,4 +103,9 @@ document.querySelector('.burger-wrapper').addEventListener('click', function () 
   body.classList.toggle('js-body-overflow');
   nav.classList.remove('js-small-nav');
 
+})
+
+document.querySelector('.cookie__btn.agree').addEventListener('click', function(){
+  let cookie = document.querySelector('.cookie');
+  cookie.style.display = "none";
 })
