@@ -14,12 +14,25 @@ section.activity
       p.activity__desc Мы ценим дружбу и общение, стараемся развивать семейные традиции. Организация&nbsp;уникальные мероприятия для всей самьи и участвуем в социальных проектах.&nbsp;Вы&nbsp;можете купить билет на любое мероприятие или заказать проведение&nbsp;своего.
       a.link.activity__link.active(href="") Календарь мероприятий
     .activity-slider
-      .activity-slide
-        .activity-slide__shadow
-        img(src="img/activity-1.png", alt="мероприятие")
-        .activity-slide__text
-          p.activity-slide__date 14/02
-          p.activity-slide__name Отмечаем день всех влюбленных
-      .activity-slider__btns
-        a.activity-slider__btn(href="") Назад
-        a.activity-slider__btn(href="") Далее
+      .swiper-wrapper
+        .activity-slide.swiper-slide
+          .activity-slide__shadow
+          img(src="img/activity-1.png", alt="мероприятие")
+          .activity-slide__text
+            p.activity-slide__date 14/02
+            p.activity-slide__name Отмечаем день всех влюбленных
+        .activity-slide.swiper-slide
+          .activity-slide__shadow
+          img(src="img/activity-1.png", alt="мероприятие")
+          .activity-slide__text
+            p.activity-slide__date 14/02
+            p.activity-slide__name Отмечаем день всех влюбленных
+        .activity-slide.swiper-slide
+          .activity-slide__shadow
+          img(src="img/activity-1.png", alt="мероприятие")
+          .activity-slide__text
+            p.activity-slide__date 14/02
+            p.activity-slide__name Отмечаем день всех влюбленных
+    .activity-slider__btns
+      a.activity-slider__btn.prev(href="") Назад
+      a.activity-slider__btn.next(href="") Далее
