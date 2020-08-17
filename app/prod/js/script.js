@@ -2,8 +2,6 @@ let swiper = new Swiper('.swiper-container', { //инициализация св
   loop: true,
   width: 1290,
   slidesPerView: 1,
-  centeredSlides: true,
-  centeredSlidesBounds: true,
   spaceBetween: 40,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -16,8 +14,15 @@ swiper.on('slideChange', function () {
   let btnPrev = document.querySelector('.bathslider .swiper-button-prev');
   let nextSlide = document.querySelector('.bathslider .swiper-slide-next');
   let nextPrev = document.querySelector('.bathslider .swiper-slide-prev');
+  let linkAbout = document.querySelector('.slider-links-list__item.more-info a');
   btnNext.innerHTML = nextSlide.getAttribute('data-name');
   btnPrev.innerHTML = nextPrev.getAttribute('data-name');
+  setTimeout(() => {
+    let active = document.querySelector('.swiper-slide-active');
+    linkAbout.setAttribute('href', active.getAttribute('href')); //смена href в ссылке подробнее о бани
+  }, 500);
+
+
 });
 document.addEventListener("DOMContentLoaded", function () {
   if(document.querySelector('.bathslider')){ //вывод списка названий бань
@@ -41,8 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let btnPrev = document.querySelector('.bathslider .swiper-button-prev');
     let nextSlide = document.querySelector('.bathslider .swiper-slide-next');
     let nextPrev = document.querySelector('.bathslider .swiper-slide-prev');
+    let linkAbout = document.querySelector('.slider-links-list__item.more-info a');
     btnNext.innerHTML = nextSlide.getAttribute('data-name');
     btnPrev.innerHTML = nextPrev.getAttribute('data-name');
+    setTimeout(() => {
+      let active = document.querySelector('.swiper-slide-active');
+      linkAbout.setAttribute('href', active.getAttribute('href')); //смена href в ссылке подробнее о бани
+    }, 500);
   }
 });
 window.addEventListener('scroll', function () { //изменение размера бокового меню
