@@ -84,7 +84,10 @@ window.addEventListener('scroll', function () { //изменение разме�
   let nav = document.querySelector('.nav');
   if(document.body.clientWidth > 1050){
     if (pageYOffset > 400) {
-      nav.classList.add('js-small-nav');}
+      nav.classList.add('js-small-nav');
+    } else {
+      nav.classList.remove('js-small-nav');
+    }
   } else {
     nav.classList.add('js-small-nav');
   }
