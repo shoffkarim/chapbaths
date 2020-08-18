@@ -1,9 +1,7 @@
 let BathSwiper = new Swiper('.swiper-container', { //инициализация свайпера
   loop: true,
-  width: 1290,
   speed: 600,
-  slidesPerView: 1,
-  spaceBetween: 40,
+  slidesPerView: 'auto',
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -23,7 +21,7 @@ let banner = new Swiper('.banners-container', { //инициализация с�
 let activity = new Swiper('.activity-slider', { //инициализация свайпера
   loop: true,
   speed: 600,
-  spaceBetween: 38,
+  slidesPerView: 'auto',
   navigation: {
     nextEl: '.activity-slider__btn.next',
     prevEl: '.activity-slider__btn.prev',

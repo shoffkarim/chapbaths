@@ -379,12 +379,13 @@
     padding-left: 0px; }
   .slider-baths .slide {
     position: relative;
-    max-width: 1290px;
+    width: 100%;
+    max-width: 1500px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    margin-left: 70px; }
+    padding-left: 150px; }
     .slider-baths .slide__name {
       font-size: 130px;
       color: #ffffff;
@@ -392,11 +393,10 @@
       letter-spacing: 26px;
       position: absolute;
       top: 100px;
-      right: 10px;
+      left: 470px;
       text-transform: uppercase; }
     .slider-baths .slide__text {
-      margin-top: 240px;
-      width: 100%; }
+      margin-top: 240px; }
     .slider-baths .slide__people-count {
       font-size: 40px;
       font-family: "ArnoPro-Display", sans-serif;
@@ -794,7 +794,8 @@
 
 .activity-slide {
   position: relative;
-  max-width: 414px; }
+  max-width: 414px;
+  margin-right: 38px; }
   .activity-slide img {
     width: 100%;
     display: block; }

@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/swiper.min.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=49eed181-7d42-49d6-b4f7-a8fec50cdba6&lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body>
@@ -728,7 +729,7 @@
           Комплекс работает круглосуточно, без выходных и перерывов.
         </p>
       </div>
-      <div class="contacts__map"><img src="img/map.png" alt="alt" /></div>
+      <div id="map" style="width: 574px; height: 784px"></div>
     </div>
   </section>
   <footer class="footer">
@@ -764,6 +765,31 @@
       }
     }
     })();
+  </script>
+  <script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        // Создает метку в центре Москвы
+        var placemark = new ymaps.Placemark([56.803751, 60.723328], {
+          balloonContent: '<img src="img/map-pin.png" />'},
+          {iconLayout: 'default#image',iconImageHref:'img/map-pin.png'}
+          );
+
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [56.803751, 60.723328],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 16
+        });
+        myMap.geoObjects.add(placemark);
+    }
   </script>
 </body>
 
