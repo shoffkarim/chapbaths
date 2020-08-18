@@ -10,5 +10,18 @@ footer.footer
       .dextra
         span.dextra__name DEXTRA
         span.dextra__job разработка<br>сайта
+script(src="js/jquery-3.5.1.js")
+script(src="js/lazylinepainter.js")
 script(src="js/swiper.min.js")
 script(src="js/script.js")
+<script type="text/javascript">
+  (function(){
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        let el = document.querySelector('#logolines');
+        let myAnimation = new LazyLinePainter(el, {"ease":"easeInOutCubic","strokeWidth":15.2,"strokeOpacity":1,"strokeColor":"#292323","reverse":true,"repeat":100});
+        myAnimation.paint();
+      }
+    }
+  })();
+</script>
