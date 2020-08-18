@@ -386,6 +386,11 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding-left: 150px; }
+    .slider-baths .slide a {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start; }
     .slider-baths .slide__name {
       font-size: 130px;
       color: #ffffff;

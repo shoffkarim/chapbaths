@@ -39,7 +39,7 @@ BathSwiper.on('slideChange', function () {
   btnNext.innerHTML = nextSlide.getAttribute('data-name');
   btnPrev.innerHTML = nextPrev.getAttribute('data-name');
   setTimeout(() => {
-    let active = document.querySelector('.swiper-slide-active');
+    let active = document.querySelector('.swiper-slide-active a');
     linkAbout.setAttribute('href', active.getAttribute('href')); //смена href в ссылке подробнее о бани
   }, 500);
 
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btnNext.innerHTML = nextSlide.getAttribute('data-name');
     btnPrev.innerHTML = nextPrev.getAttribute('data-name');
     setTimeout(() => {
-      let active = document.querySelector('.swiper-slide-active');
+      let active = document.querySelector('.swiper-slide-active a');
       linkAbout.setAttribute('href', active.getAttribute('href')); //смена href в ссылке подробнее о бани
     }, 500);
   }
