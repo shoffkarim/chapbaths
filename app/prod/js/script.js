@@ -75,13 +75,18 @@ document.addEventListener("DOMContentLoaded", function () {
       linkAbout.setAttribute('href', active.getAttribute('href')); //смена href в ссылке подробнее о бани
     }, 500);
   }
+  if(document.body.clientWidth < 1050) {
+    let nav = document.querySelector('.nav');
+    nav.classList.add('js-small-nav');
+  }
 });
 window.addEventListener('scroll', function () { //изменение размера бокового меню
   let nav = document.querySelector('.nav');
-  if (pageYOffset > 400) {
-    nav.classList.add('js-small-nav');
+  if(document.body.clientWidth > 1050){
+    if (pageYOffset > 400) {
+      nav.classList.add('js-small-nav');}
   } else {
-    nav.classList.remove('js-small-nav');
+    nav.classList.add('js-small-nav');
   }
 })
 function uniqueArray(arr) { //функция удаления одинаковых элементов из массива
@@ -99,11 +104,16 @@ document.querySelector('.burger-wrapper').addEventListener('click', function () 
   let nav = document.querySelector('.nav');
   let menu = document.querySelector('.js-menu');
   let body = document.querySelector('body');
-  btn.classList.toggle('js-burger')
-  menu.classList.toggle('js-menu-open');
-  body.classList.toggle('js-body-overflow');
-  nav.classList.remove('js-small-nav');
-
+  if(document.body.clientWidth > 1050) {
+    btn.classList.toggle('js-burger')
+    menu.classList.toggle('js-menu-open');
+    body.classList.toggle('js-body-overflow');
+    nav.classList.remove('js-small-nav');
+  } else {
+    btn.classList.toggle('js-burger')
+    menu.classList.toggle('js-menu-open');
+    body.classList.toggle('js-body-overflow');
+  }
 })
 
 document.querySelector('.cookie__btn.agree').addEventListener('click', function(){
