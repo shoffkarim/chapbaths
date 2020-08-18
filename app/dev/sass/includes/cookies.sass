@@ -30,3 +30,35 @@
     flex-direction: row
   &__btn:first-child
     margin-right: 20px
+.disagree-cookie
+  width: 100%
+  height: 100%
+  position: fixed
+  top: -1000px
+  left: 0
+  background-color: $bac-color
+  z-index: 120
+  opacity: 0
+  -webkit-transition: all 0.4s
+  -o-transition: all 0.4s
+  transition: all 0.4s
+.disagree__text
+  font-family: $armo-display
+  font-size: 26px
+  line-height: 30px
+  color: #ffffff
+  max-width: 400px
+  text-align: center
+  margin-top: 300px
+  margin-left: auto
+  margin-right: auto
+.disagree__close
+  margin-left: auto
+  margin-right: auto
+  margin-top: 50px
+.disagree-cookie.disagree-open-popup
+  top: 0
+  opacity: 1
+  -webkit-transition: all 0.4s
+  -o-transition: all 0.4s
+  transition: all 0.4s

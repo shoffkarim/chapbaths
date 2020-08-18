@@ -123,3 +123,11 @@ document.querySelector('.cookie__btn.agree').addEventListener('click', function(
   let cookie = document.querySelector('.cookie');
   cookie.style.display = "none";
 })
+document.querySelector('.cookie__btn.disagree__open').addEventListener('click', function(){
+  let cookiepopup = document.querySelector('.disagree-cookie');
+  cookiepopup.classList.add('disagree-open-popup');
+})
+document.querySelector('.cookie__btn.disagree__close').addEventListener('click', function(){
+  let cookiepopup = document.querySelector('.disagree-cookie');
+  cookiepopup.classList.remove('disagree-open-popup');
+})
