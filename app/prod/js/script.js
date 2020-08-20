@@ -30,20 +30,46 @@ let activity = new Swiper('.activity-slider', { //инициализация с�
     delay: 3000,
   },
 });
+let photoGallery = new Swiper('.photo-gallery', { //инициализация свайпера
+  loop: true,
+  speed: 600,
+  slidesPerView: 7,
+  autoplay: {
+    delay: 3000,
+  },
+});
 BathSwiper.on('slideChange', function () {
-  let btnNext = document.querySelector('.bathslider .swiper-button-next'); //поставить в конпки название бань
-  let btnPrev = document.querySelector('.bathslider .swiper-button-prev');
-  let nextSlide = document.querySelector('.bathslider .swiper-slide-next');
-  let nextPrev = document.querySelector('.bathslider .swiper-slide-prev');
-  let linkAbout = document.querySelector('.slider-links-list__item.more-info a');
-  btnNext.innerHTML = nextSlide.getAttribute('data-name');
-  btnPrev.innerHTML = nextPrev.getAttribute('data-name');
   setTimeout(() => {
+    let activeSlide = document.querySelector('.swiper-slide-active');
+    let prevSlide = document.querySelector('.swiper-slide-prev');
+    let nextSlide = document.querySelector('.swiper-slide-next');
+    activeSlide.classList.add('js-slider-swipe');
+    prevSlide.classList.remove('js-slider-swipe');
+    nextSlide.classList.remove('js-slider-swipe');
+  }, 100);
+  setTimeout(() => {
+    let btnNext = document.querySelector('.bathslider .swiper-button-next'); //поставить в конпки название бань
+    let btnPrev = document.querySelector('.bathslider .swiper-button-prev');
+    let nextSlide = document.querySelector('.bathslider .swiper-slide-next');
+    let nextPrev = document.querySelector('.bathslider .swiper-slide-prev');
+    let linkAbout = document.querySelector('.slider-links-list__item.more-info a');
+    btnNext.innerHTML = nextSlide.getAttribute('data-name');
+    btnPrev.innerHTML = nextPrev.getAttribute('data-name');
     let active = document.querySelector('.swiper-slide-active a');
     linkAbout.setAttribute('href', active.getAttribute('href')); //смена href в ссылке подробнее о бани
   }, 500);
-
-
+});
+BathSwiper.on('transitionStart', function () {
+  let btnNext = document.querySelector('.bathslider .swiper-button-next');
+  let btnPrev = document.querySelector('.bathslider .swiper-button-prev');
+  btnNext.classList.add('slider_btn-anim');
+  btnPrev.classList.add('slider_btn-anim');
+});
+BathSwiper.on('transitionEnd', function () {
+  let btnNext = document.querySelector('.bathslider .swiper-button-next');
+  let btnPrev = document.querySelector('.bathslider .swiper-button-prev');
+  btnNext.classList.remove('slider_btn-anim');
+  btnPrev.classList.remove('slider_btn-anim');
 });
 document.addEventListener("DOMContentLoaded", function () {
   if(document.querySelector('.bathslider')){ //вывод списка названий бань
@@ -74,6 +100,15 @@ document.addEventListener("DOMContentLoaded", function () {
       let active = document.querySelector('.swiper-slide-active a');
       linkAbout.setAttribute('href', active.getAttribute('href')); //смена href в ссылке подробнее о бани
     }, 500);
+    let listOfnames = document.querySelectorAll('.slider-list__item');//скролл к слайду из меню все бани
+    listOfnames.forEach(function(i){
+      i.addEventListener('click', function(){
+        let nameSlide = this.innerText;
+        let slide = document.querySelector(`[data-name="${nameSlide}"]`);
+        let number = slide.getAttribute('data-swiper-slide-index');
+        BathSwiper.slideTo(number, 600, true);
+      })
+    })
   }
   if(document.body.clientWidth < 1050) {
     let nav = document.querySelector('.nav');
@@ -90,6 +125,11 @@ window.addEventListener('scroll', function () { //изменение разме�
     }
   } else {
     nav.classList.add('js-small-nav');
+  }
+  if(pageYOffset > 230){
+    document.querySelector('.slider-baths').classList.add('js-slider-anim');
+  } else {
+    document.querySelector('.slider-baths').classList.remove('js-slider-anim');
   }
 })
 function uniqueArray(arr) { //функция удаления одинаковых элементов из массива
@@ -121,7 +161,10 @@ document.querySelector('.burger-wrapper').addEventListener('click', function () 
 
 document.querySelector('.cookie__btn.agree').addEventListener('click', function(){
   let cookie = document.querySelector('.cookie');
-  cookie.style.display = "none";
+  cookie.classList.add('cookie-close');
+  setTimeout(() => {
+    cookie.style.display = "none";
+  }, 500);
 })
 document.querySelector('.cookie__btn.disagree__open').addEventListener('click', function(){
   let cookiepopup = document.querySelector('.disagree-cookie');

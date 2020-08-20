@@ -1,7 +1,9 @@
 @import includes/vars
 
 .gallery
-  margin-top: 195px
+  background-color: #fcfcfc
+  padding-top: 195px
+  padding-bottom: 143px
   &-heading
     font-family: $armo-reg
     font-size: 60px
@@ -18,8 +20,22 @@
     align-items: center
     margin-top: 40px
     img
-      display: block
-      width: 370px
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      -o-object-fit: cover
+      object-fit: cover
+      font-family: 'object-fit: cover;'
+      -webkit-transition: .7s -webkit-transform
+      transition: .7s -webkit-transform
+      transition: .7s transform
+      transition: .7s transform, .7s -webkit-transform
+      will-change: transform
+      -webkit-backface-visibility: hidden
+      -webkit-transform: scale(1.0) translateZ(0)
+      transform: scale(1.0) translateZ(0)
 .contacts-links
   display: flex
   flex-direction: row
@@ -46,3 +62,28 @@
     -webkit-transition: all 0.5s
     -o-transition: all 0.5s
     transition: all 0.5s
+.gallery__item
+  width: 373px
+  height: 373px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: start
+  -ms-flex-pack: start
+  justify-content: flex-start
+  position: relative
+  overflow: hidden
+  &:hover img
+    -webkit-transform: scale(1.2) translateZ(0)
+    transform: scale(1.2) translateZ(0)
+.gallery__item-over
+  position: absolute
+  right: 0
+  top: 0
+  width: 100%
+  min-height: 100%
+  overflow: hidden
+  display: block

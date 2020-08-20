@@ -2,7 +2,7 @@
 
 .banners
   background-color: $bac-color
-  height: 100vh
+  height: 100%
   .wrapper
     margin-left: 0
     padding-left: 150px
@@ -60,6 +60,14 @@
     font-family: $armo-display
     color: #ffffff
     position: relative
+    -webkit-transition: all 0.4s
+    -o-transition: all 0.4s
+    transition: all 0.4s
+    &:hover
+      color: #7b6a6a
+      -webkit-transition: all 0.4s
+      -o-transition: all 0.4s
+      transition: all 0.4s
     &:first-child
       margin-right: 50px
       padding-left: 60px

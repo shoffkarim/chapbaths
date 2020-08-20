@@ -1,14 +1,12 @@
 @import includes/vars
 .header
   height: 100vh
+  position: relative
   .wrapper
     display: flex
     flex-direction: column
     justify-content: space-between
     height: 100%
-    background-image: url('../img/main.png')
-    background-position: right
-    // background-repeat: no-repeat
   &__text-container
     margin-left: auto
     margin-right: 164px
@@ -36,16 +34,18 @@
     text-align: center
     max-width: 540px
   &__links
-    position: relative
+    position: absolute
     margin-right: 201px
     display: flex
     flex-direction: row
     justify-content: flex-end
     align-items: center
+    bottom: 0
+    right: 0
   &-link
     padding: 28px 60px
 .content__video
-  position: fixed
+  position: absolute
   z-index: -1
   top: 50%
   left: 50%
@@ -53,4 +53,4 @@
   min-width: 100%
   -webkit-transform: translate(-50%, -50%)
   transform: translate(-50%, -50%)
-  opacity: .7
+  opacity: 1

@@ -5,6 +5,10 @@
   .wrapper
     padding-right: 0px
     padding-left: 0px
+    opacity: 0
+    -webkit-transition: all 0.8s
+    -o-transition: all 0.8s
+    transition: all 0.8s
   .slide
     position: relative
     width: 100%
@@ -14,6 +18,19 @@
     justify-content: flex-start
     align-items: flex-start
     padding-left: 150px
+    &__img
+      max-width: 715px
+      max-height: 663px
+      -webkit-transition: all 0.8s 0.3s
+      -o-transition: all 0.8s 0.3s
+      transition: all 0.8s 0.3s
+      img
+        width: 100px
+        height: 663px
+        -webkit-transition: all 0.8s 0.3s
+        -o-transition: all 0.8s 0.3s
+        transition: all 0.8s 0.3s
+
     a
       display: flex
       flex-direction: row
@@ -26,8 +43,11 @@
       letter-spacing: 26px
       position: absolute
       top: 100px
-      left: 470px
+      left: 570px
       text-transform: uppercase
+      -webkit-transition: all 0.8s 0.3s
+      -o-transition: all 0.8s 0.3s
+      transition: all 0.8s 0.3s
     &__text
       margin-top: 240px
     &__people-count
@@ -41,7 +61,10 @@
       margin-right: 120px
       padding-top: 4px
       letter-spacing: 8px
-      margin-left: 60px
+      margin-left: 150px
+      -webkit-transition: all 0.8s 0.3s
+      -o-transition: all 0.8s 0.3s
+      transition: all 0.8s 0.3s
     &__desc
       color: #ffffff
       font-size: 15px
@@ -49,14 +72,14 @@
       font-family: $helvetica-neue
       max-width: 440px
       margin-right: auto
-      margin-left: 60px
+      margin-left: 150px
       margin-bottom: 47px
     &__cost
       display: flex
       flex-direction: row
       justify-content: flex-start
       align-items: center
-      margin-left: 60px
+      margin-left: 150px
     .cost
       &-type
         display: flex
@@ -81,6 +104,7 @@
   &-list
     display: flex
     flex-direction: row
+    margin-left: 360px
     &__item
       a
         padding: 30px 60px
@@ -95,6 +119,7 @@
   font-family: $armo-display
   font-size: 21px
   width: auto
+  margin-top: 0
   &::before
     content: ""
     width: 50px
@@ -103,6 +128,9 @@
     position: absolute
     top: 20px
     right: 0
+    -webkit-transition: all 1s
+    -o-transition: all 1s
+    transition: all 1s
   &::after
     display: none
 .swiper-button-next
@@ -115,6 +143,22 @@
   &::before
     left: 0
     right: auto
+.swiper-button-next
+  &:hover
+    &::before
+      width: 30px
+      right: 20px
+      -webkit-transition: all 0.4s
+      -o-transition: all 0.4s
+      transition: all 0.4s
+.swiper-button-prev
+  &:hover
+    &::before
+      width: 30px
+      left: 20px
+      -webkit-transition: all 0.4s
+      -o-transition: all 0.4s
+      transition: all 0.4s
 .slider-list
   padding: 45px 50px
   padding-bottom: 30px
@@ -137,6 +181,12 @@
     line-height: 27px
     color: #2d2727
     margin-bottom: 8px
+    cursor: pointer
+    &:hover
+      color: #7b6a6a
+      -webkit-transition: all 0.4s
+      -o-transition: all 0.4s
+      transition: all 0.4s
 .slider__btns
   display: flex
   flex-direction: column
@@ -150,13 +200,21 @@
     visibility: visible
     top: 85px
     transition: opacity 0.8s, visibility 0.8s, top 0.8s
+  &:hover .all-baths
+    color: #7b6a6a
+    -webkit-transition: all 0.4s
+    -o-transition: all 0.4s
+    transition: all 0.4s
 .all-baths
   font-family: $armo-display
   font-size: 21px
-  color: #7b6a6a
+  color: #ffffff
   position: relative
   padding-left: 60px
   padding-right: 60px
+  -webkit-transition: all 0.4s
+  -o-transition: all 0.4s
+  transition: all 0.4s
   &::after, &::before
     content: ""
     display: block
@@ -169,3 +227,157 @@
   &::after
     right: 0
     left: auto
+  &:hover
+    color: #7b6a6a
+    -webkit-transition: all 0.4s
+    -o-transition: all 0.4s
+    transition: all 0.4s
+.js-slider-anim .wrapper
+  opacity: 1
+  -webkit-transition: all 0.8s 0.3s
+  -o-transition: all 0.8s 0.3s
+  transition: all 0.8s 0.3s
+.js-slider-anim .slide__name
+  left: 470px
+  -webkit-transition: all 0.8s 0.3s
+  -o-transition: all 0.8s 0.3s
+  transition: all 0.8s 0.3s
+.js-slider-anim .slide__people-count
+  margin-left: 60px
+  -webkit-transition: all 0.8s 0.3s
+  -o-transition: all 0.8s 0.3s
+  transition: all 0.8s 0.3s
+.js-slider-anim .slide__desc
+  margin-left: 60px
+  -webkit-transition: all 0.8s 0.4s
+  -o-transition: all 0.8s 0.4s
+  transition: all 0.8s 0.4s
+.js-slider-anim .slide__cost
+  margin-left: 60px
+  -webkit-transition: all 0.8s 0.45s
+  -o-transition: all 0.8s 0.45s
+  transition: all 0.8s 0.45s
+.js-slider-anim .slide__img img
+  width: 100%
+  -webkit-transition: all 0.5s 0.3s
+  -o-transition: all 0.5s 0.3s
+  transition: all 0.5s 0.3s
+
+.swiper-slide-prev .slide__img, .swiper-slide-next .slide__img
+  margin: auto 0
+  -webkit-transition: all 0.5s 0.3s
+  -o-transition: all 0.5s 0.3s
+  transition: all 0.5s 0.3s
+
+.swiper-slide-prev .slide__name, .swiper-slide-next .slide__name
+  left: 570px
+  -webkit-transition: all 0.8s 0.3s
+  -o-transition: all 0.8s 0.3s
+  transition: all 0.8s 0.3s
+.swiper-slide-prev .slide__people-count, .swiper-slide-next .slide__people-count
+  margin-left: 150px
+  -webkit-transition: all 0.8s 0.3s
+  -o-transition: all 0.8s 0.3s
+  transition: all 0.8s 0.3s
+.swiper-slide-prev .slide__desc, .swiper-slide-next .slide__desc
+  margin-left: 150px
+  -webkit-transition: all 0.8s 0.4s
+  -o-transition: all 0.8s 0.4s
+  transition: all 0.8s 0.4s
+.swiper-slide-prev .slide__cost, .swiper-slide-next .slide__cost
+  margin-left: 150px
+  -webkit-transition: all 0.8s 0.45s
+  -o-transition: all 0.8s 0.45s
+  transition: all 0.8s 0.45s
+.swiper-slide-prev .slide__img img, .swiper-slide-next .slide__img img
+  width: 100%
+  height: 400px
+  -webkit-transition: all 0.5s 0.3s
+  -o-transition: all 0.5s 0.3s
+  transition: all 0.5s 0.3s
+
+
+
+.js-slider-swipe .slide__name
+  left: 470px
+  -webkit-transition: all 0.8s 0.3s
+  -o-transition: all 0.8s 0.3s
+  transition: all 0.8s 0.3s
+.js-slider-swipe .slide__people-count
+  margin-left: 60px
+  -webkit-transition: all 0.8s 0.3s
+  -o-transition: all 0.8s 0.3s
+  transition: all 0.8s 0.3s
+.js-slider-swipe .slide__desc
+  margin-left: 60px
+  -webkit-transition: all 0.8s 0.4s
+  -o-transition: all 0.8s 0.4s
+  transition: all 0.8s 0.4s
+.js-slider-swipe .slide__cost
+  margin-left: 60px
+  -webkit-transition: all 0.8s 0.45s
+  -o-transition: all 0.8s 0.45s
+  transition: all 0.8s 0.45s
+.js-slider-swipe .slide__img img
+  width: 100%
+  height: 100%
+  -webkit-transition: all 0.5s 0.3s
+  -o-transition: all 0.5s 0.3s
+  transition: all 0.5s 0.3s
+
+.tobook
+  position: relative
+  width: 221px
+  height: 76px
+  &:hover .tobook__word
+    top: 0px
+    left: 60px
+    opacity: 0
+    -webkit-transition: all 0.4s
+    -o-transition: all 0.4s
+    transition: all 0.4s
+  &:hover .tobook__time
+    opacity: 1
+    top: 30px
+    left: 60px
+    -webkit-transition: all 0.4s
+    -o-transition: all 0.4s
+    transition: all 0.4s
+.tobook__word
+  position: absolute
+  top: 30px
+  left: 60px
+  -webkit-transition: all 0.4s
+  -o-transition: all 0.4s
+  transition: all 0.4s
+
+.tobook__time
+  position: absolute
+  top: 60px
+  left: 60px
+  opacity: 0
+  -webkit-transition: all 0.4s
+  -o-transition: all 0.4s
+  transition: all 0.4s
+
+.more-info
+  border-right: 1px solid rgba(255, 255, 255, 0.05)
+
+.slider_btn-anim
+  animation: 1.5s sliderbtn
+@keyframes sliderbtn
+  0%
+    margin-top: 0
+    opacity: 1
+  25%
+    margin-top: 5px
+    opacity: 0.5
+  50%
+    margin-top: 10px
+    opacity: 0
+  75%
+    margin-top: 5px
+    opacity: 0.5
+  100%
+    margin-top: 0
+    opacity: 1

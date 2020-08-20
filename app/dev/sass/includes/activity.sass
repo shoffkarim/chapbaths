@@ -4,35 +4,39 @@
   height: 510px
   padding-left: 150px
   position: relative
-  .first-photo
-    position: absolute
-    top: 216px
-    left: 127px
-  .second-photo
-    position: absolute
-    top: 138px
-    left: 385px
-  .third-photo
-    position: absolute
-    top: 238px
-    left: 526px
-  .fouth-photo
-    position: absolute
-    top: 95px
-    left: 952px
-  .sixth-photo
-    position: absolute
-    top: 50px
-    left: 1211px
-  .seventh-photo
-    position: absolute
-    top: 257px
-    right: 231px
-  .eighth-photo
-    position: absolute
-    top: 213px
-    right: 0px
+.first-photo
+  position: absolute
+  top: 215px
+  left: 20px
+.second-photo
+  position: absolute
+  top: 137px
+  left: -19px
+.third-photo
+  position: absolute
+  top: 237px
+  left: -131px
+.fouth-photo
+  position: absolute
+  top: 94px
+  left: 42px
+.sixth-photo
+  position: absolute
+  top: 59px
+  left: 50px
+.seventh-photo
+  position: absolute
+  top: 255px
+  left: 137px
+.eighth-photo
+  position: absolute
+  top: 212px
+  left: 60px
 .activity
+  background-color: #fcfcfc
+  margin-top: -2px
+  &__banner
+    margin: 0 auto
   &-container
     position: relative
     padding-left: 289px
@@ -45,7 +49,6 @@
     line-height: 80px
     font-family: $armo-reg
     color: #2d2727
-    max-width: 740px
     margin-top: 37px
   &__desc
     font-family: $helvetica-neue
@@ -74,6 +77,9 @@
       font-family: $armo-display
       color: #2d2727
       position: relative
+      -webkit-transition: all 0.4s
+      -o-transition: all 0.4s
+      transition: all 0.4s
       &:first-child
         margin-right: 50px
         padding-left: 60px
@@ -90,22 +96,44 @@
         position: absolute
         top: 9px
         left: 0
+      &:hover
+        color: #7b6a6a
+        -webkit-transition: all 0.4s
+        -o-transition: all 0.4s
+        transition: all 0.4s
+
   &-slide
     position: relative
     max-width: 414px
     margin-right: 38px
     img
+      position: absolute
+      left: 0
+      top: 0
       width: 100%
-      display: block
+      height: 100%
+      -o-object-fit: cover
+      object-fit: cover
+      font-family: 'object-fit: cover;'
+      -webkit-transition: .7s -webkit-transform
+      transition: .7s -webkit-transform
+      transition: .7s transform
+      transition: .7s transform, .7s -webkit-transform
+      will-change: transform
+      -webkit-backface-visibility: hidden
+      -webkit-transform: scale(1.0) translateZ(0)
+      transform: scale(1.0) translateZ(0)
     &__shadow
-      width: 1px
-      height: 1px
+      width: 100%
+      height: 100%
       position: absolute
       bottom: 0
       left: 0
-      -webkit-box-shadow: 100px -100px 70px 80px rgba(0, 0, 0, 0.88)
-      -moz-box-shadow: 100px -100px 70px 80px rgba(0, 0, 0, 0.88)
-      box-shadow: 100px -100px 70px 80px rgba(0, 0, 0, 0.88)
+      background-image: url('../img/activity-shadow.png')
+      background-position: left
+      background-size: cover
+      background-repeat: no-repeat
+      z-index: 1
     &__text
       position: absolute
       bottom: 0
@@ -113,6 +141,7 @@
       padding-bottom: 45px
       padding-left: 40px
       padding-right: 40px
+      z-index: 2
     &__date
       font-family: $armo-display
       font-size: 42px
@@ -125,4 +154,52 @@
       text-decoration-style: dotted
       text-decoration-line: underline
       text-decoration-color: rgba(255, 255, 255, 0.25)
+      -webkit-transition: all 0.4s
+      -o-transition: all 0.4s
+      transition: all 0.4s
+      display: inline-block
       max-width: 250px
+      cursor: pointer
+      &:hover
+        color: #7b6a6a
+        text-decoration-color: rgba(255, 255, 255, 0)
+        -webkit-transition: all 0.4s
+        -o-transition: all 0.4s
+        transition: all 0.4s
+.photo-gallery
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  overflow: hidden
+  list-style: none
+  padding: 0
+  padding-left: 150px
+  z-index: 1
+.gallery-slide
+  position: relative
+.activity-slide__img-wrap
+  width: 414px
+  height: 505px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: start
+  -ms-flex-pack: start
+  justify-content: flex-start
+  position: relative
+  overflow: hidden
+.activity-slide
+  &:hover img
+    -webkit-transform: scale(1.2) translateZ(0)
+    transform: scale(1.2) translateZ(0)
+.activity-slide__img-over
+  position: absolute
+  right: 0
+  top: 0
+  width: 100%
+  min-height: 100%
+  overflow: hidden
+  display: block

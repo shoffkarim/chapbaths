@@ -184,8 +184,9 @@
     </div>
   </article>
   <header class="header">
+    <video class="content__video" preload="" autoplay="autoplay" muted="muted" loop="loop" poster="img/main.png")>
+      <source src="video/video.mp4" type="video/mp4"></video>
     <div class="wrapper">
-      <div class="photo-poster"></div>
       <div class="header__text-container">
         <h1 class="header__tagline">
           Настоящий рай для ценителей традиций и легкого пара!
@@ -212,7 +213,7 @@
         </div>
         <div class="swiper-wrapper">
           <div class="slide swiper-slide" href="/fish" data-name="Рыбацкая">
-            <a href="/fish">
+            <a href="/fish"></a>
               <div class="slide__img">
                 <img src="img/slideer-photo.png" alt="слайд" />
               </div>
@@ -237,10 +238,9 @@
                   </div>
                 </div>
               </div>
-            </a>
           </div>
           <div class="slide swiper-slide" data-name="Охотничья">
-            <a href="/hunt">
+            <a href="/hunt"></a>
               <div class="slide__img">
                 <img src="img/slideer-photo.png" alt="слайд" />
               </div>
@@ -265,10 +265,9 @@
                   </div>
                 </div>
               </div>
-            </a>
           </div>
           <div class="slide swiper-slide" href="/siberia" data-name="Сибирская">
-            <a href="/siberia">
+            <a href="/siberia"></a>
               <div class="slide__img">
                 <img src="img/slideer-photo.png" alt="слайд" />
               </div>
@@ -293,10 +292,9 @@
                   </div>
                 </div>
               </div>
-            </a>
           </div>
           <div class="slide swiper-slide" href="/chap" data-name="Чапаевская">
-            <a href="/chap">
+            <a href="/chap"></a>
               <div class="slide__img">
                 <img src="img/slideer-photo.png" alt="слайд" />
               </div>
@@ -321,10 +319,9 @@
                   </div>
                 </div>
               </div>
-            </a>
           </div>
           <div class="slide swiper-slide" href="/kupech" data-name="Купеческая">
-            <a href="/kupech">
+            <a href="/kupech"></a>
               <div class="slide__img">
                 <img src="img/slideer-photo.png" alt="слайд" />
               </div>
@@ -349,10 +346,9 @@
                   </div>
                 </div>
               </div>
-            </a>
           </div>
           <div class="slide swiper-slide" data-name="Боярская">
-            <a href="/boyar">
+            <a href="/boyar"></a>
               <div class="slide__img">
                 <img src="img/slideer-photo.png" alt="слайд" />
               </div>
@@ -377,10 +373,9 @@
                   </div>
                 </div>
               </div>
-            </a>
           </div>
           <div class="slide swiper-slide" href="/king" data-name="Царская">
-            <a href="/king">
+            <a href="/king"></a>
               <div class="slide__img">
                 <img src="img/slideer-photo.png" alt="слайд" />
               </div>
@@ -405,10 +400,9 @@
                   </div>
                 </div>
               </div>
-            </a>
           </div>
           <div class="slide swiper-slide" href="/taiga" data-name="Таежная">
-            <a href="/taiga">
+            <a href="/taiga"></a>
               <div class="slide__img">
                 <img src="img/slideer-photo.png" alt="слайд" />
               </div>
@@ -433,17 +427,18 @@
                   </div>
                 </div>
               </div>
-            </a>
           </div>
         </div>
         <div class="swiper-button-next">Охотничья</div>
         <div class="swiper-button-prev">Таежная</div>
       </div>
       <div class="slider-links">
-        <a class="link slider-links__time active" href="">От 2-х часов</a>
         <ul class="slider-links-list">
           <li class="slider-links-list__item">
-            <a class="link active" href="">Бронировать</a>
+            <a class="link active tobook" href="">
+              <span class="tobook__word">Бронировать</span>
+              <span class="tobook__time">От 2-х часов</span>
+            </a>
           </li>
           <li class="slider-links-list__item more-info">
             <a class="link" href="">Подробнее о бане</a>
@@ -573,11 +568,29 @@
   </section>
   <section class="activity">
     <div class="photo-gallery">
-      <img class="first-photo" src="img/tape/img-5.png" alt="alt" /><img class="second-photo" src="img/tape/img-6.png"
-        alt="alt" /><img class="third-photo" src="img/tape/img-4.png" alt="alt" /><img class="fouth-photo"
-        src="img/tape/img.png" alt="alt" /><img class="sixth-photo" src="img/tape/img-3.png" alt="alt" /><img
-        class="seventh-photo" src="img/tape/img-1.png" alt="alt" /><img class="eighth-photo" src="img/tape/img-2.png"
-        alt="alt" />
+      <div class="gallery-slider swiper-wrapper">
+        <div class="gallery-slide swiper-slide">
+          <img class="first-photo" src="img/tape/img-5.png" alt="alt" />
+        </div>
+        <div class="gallery-slide swiper-slide">
+          <img class="second-photo" src="img/tape/img-6.png" alt="alt" />
+        </div>
+        <div class="gallery-slide swiper-slide">
+          <img class="third-photo" src="img/tape/img-4.png" alt="alt" />
+        </div>
+        <div class="gallery-slide swiper-slide">
+          <img class="fouth-photo" src="img/tape/img.png" alt="alt" />
+        </div>
+        <div class="gallery-slide swiper-slide">
+          <img class="sixth-photo" src="img/tape/img-3.png" alt="alt" />
+        </div>
+        <div class="gallery-slide swiper-slide">
+          <img class="seventh-photo" src="img/tape/img-1.png" alt="alt" />
+        </div>
+        <div class="gallery-slide swiper-slide">
+          <img class="eighth-photo" src="img/tape/img-2.png" alt="alt" />
+        </div>
+      </div>
     </div>
     <div class="activity-container">
       <div class="activity__banner">
@@ -596,32 +609,44 @@
         <div class="swiper-wrapper">
           <div class="activity-slide swiper-slide">
             <div class="activity-slide__shadow"></div>
-            <img src="img/activity-1.png" alt="мероприятие" />
+            <div class="activity-slide__img-wrap">
+              <a class="activity-slide__img-over">
+                <img src="img/activity-1.png" alt="мероприятие" />
+              </a>
+            </div>
             <div class="activity-slide__text">
               <p class="activity-slide__date">14/02</p>
-              <p class="activity-slide__name">
+              <a class="activity-slide__name">
                 Отмечаем день всех влюбленных
-              </p>
+              </a>
             </div>
           </div>
           <div class="activity-slide swiper-slide">
             <div class="activity-slide__shadow"></div>
-            <img src="img/activity-1.png" alt="мероприятие" />
+            <div class="activity-slide__img-wrap">
+              <a class="activity-slide__img-over">
+                <img src="img/activity-1.png" alt="мероприятие" />
+              </a>
+            </div>
             <div class="activity-slide__text">
               <p class="activity-slide__date">14/02</p>
-              <p class="activity-slide__name">
+              <a class="activity-slide__name">
                 Отмечаем день всех влюбленных
-              </p>
+              </a>
             </div>
           </div>
           <div class="activity-slide swiper-slide">
             <div class="activity-slide__shadow"></div>
-            <img src="img/activity-1.png" alt="мероприятие" />
+            <div class="activity-slide__img-wrap">
+              <a class="activity-slide__img-over">
+                <img src="img/activity-1.png" alt="мероприятие" />
+              </a>
+            </div>
             <div class="activity-slide__text">
               <p class="activity-slide__date">14/02</p>
-              <p class="activity-slide__name">
+              <a class="activity-slide__name">
                 Отмечаем день всех влюбленных
-              </p>
+              </a>
             </div>
           </div>
         </div>
@@ -637,12 +662,72 @@
         Фотографии с мероприятий в нашем Intagram
       </h2>
       <div class="gallery-container">
-        <img src="img/gallery/img-11.png" alt="alt" /><img src="img/gallery/img-10.png" alt="alt" /><img
+        <div class="gallery__item">
+          <a class="gallery__item-over">
+            <img src="img/gallery/img-11.png" alt="alt" />
+          </a>
+        </div>
+        <div class="gallery__item">
+          <a class="gallery__item-over">
+            <img src="img/gallery/img-10.png" alt="alt" />
+          </a>
+        </div>
+        <div class="gallery__item">
+          <a class="gallery__item-over">
+            <img src="img/gallery/img-9.png" alt="alt" />
+          </a>
+        </div>
+        <div class="gallery__item">
+          <a class="gallery__item-over">
+            <img src="img/gallery/img-8.png" alt="alt" />
+          </a>
+        </div>
+        <div class="gallery__item">
+          <a class="gallery__item-over">
+            <img src="img/gallery/img-7.png" alt="alt" />
+          </a>
+        </div>
+        <div class="gallery__item">
+          <a class="gallery__item-over">
+            <img src="img/gallery/img-6.png" alt="alt" />
+          </a>
+        </div>
+        <div class="gallery__item">
+          <a class="gallery__item-over">
+            <img src="img/gallery/img-5.png" alt="alt" />
+          </a>
+        </div>
+        <div class="gallery__item">
+          <a class="gallery__item-over">
+            <img src="img/gallery/img-4.png" alt="alt" />
+          </a>
+        </div>
+        <div class="gallery__item">
+          <a class="gallery__item-over">
+            <img src="img/gallery/img-3.png" alt="alt" />
+          </a>
+        </div>
+        <div class="gallery__item">
+          <a class="gallery__item-over">
+            <img src="img/gallery/img-2.png" alt="alt" />
+          </a>
+        </div>
+        <div class="gallery__item">
+          <a class="gallery__item-over">
+            <img src="img/gallery/img-1.png" alt="alt" />
+          </a>
+        </div>
+        <div class="gallery__item">
+          <a class="gallery__item-over">
+            <img src="img/gallery/img.png" alt="alt" />
+          </a>
+        </div>
+        <!-- <img src="img/gallery/img-10.png" alt="alt" /><img
           src="img/gallery/img-9.png" alt="alt" /><img src="img/gallery/img-8.png" alt="alt" /><img
           src="img/gallery/img-7.png" alt="alt" /><img src="img/gallery/img-6.png" alt="alt" /><img
           src="img/gallery/img-5.png" alt="alt" /><img src="img/gallery/img-4.png" alt="alt" /><img
           src="img/gallery/img-3.png" alt="alt" /><img src="img/gallery/img-2.png" alt="alt" /><img
-          src="img/gallery/img-1.png" alt="alt" /><img src="img/gallery/img.png" alt="alt" />
+          src="img/gallery/img-1.png" alt="alt" /><img src="img/gallery/img.png" alt="alt" /> -->
       </div>
       <ul class="contacts-links">
         <li class="contacts-links__item">
@@ -840,11 +925,11 @@
       </svg>
     </div>
   </section>
-  <script src="js/jquery-3.5.1.js"></script>
-  <script src="js/lazylinepainter.js"></script>
+  <!-- <script src="js/jquery-3.5.1.js"></script>-->
+  <!-- <script src="js/lazylinepainter.js"></script> -->
   <script src="js/swiper.min.js"></script>
   <script src="js/script.js"></script>
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     (function(){
     document.onreadystatechange = () => {
       if (document.readyState === 'complete') {
@@ -860,7 +945,7 @@
       }
     }
     })();
-  </script>
+  </script> -->
   <script type="text/javascript">
     // Функция ymaps.ready() будет вызвана, когда
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
