@@ -225,7 +225,18 @@
       -webkit-animation: burger-bottom 1s ease-in-out forwards;
       animation: burger-bottom 1s ease-in-out forwards; }
     .burger-wrapper.js-burger .burger {
-      background-color: transparent;
+      opacity: 0;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+    .burger-wrapper.js-burger-close::after {
+      -webkit-animation: burger-bottom-invert 1s ease-in-out forwards;
+      animation: burger-bottom-invert 1s ease-in-out forwards; }
+    .burger-wrapper.js-burger-close::before {
+      -webkit-animation: burger-top-invert 1s ease-in-out forwards;
+      animation: burger-top-invert 1s ease-in-out forwards; }
+    .burger-wrapper.js-burger-close .burger {
+      opacity: 1;
       -webkit-transition: all 0.4s;
       -o-transition: all 0.4s;
       transition: all 0.4s; }
@@ -446,6 +457,62 @@
     top: 9px;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg); } }
+
+@-webkit-keyframes burger-top-invert {
+  0% {
+    top: 10px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  40% {
+    top: 10px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  60% {
+    top: 10px; }
+  100% {
+    top: 0; } }
+
+@keyframes burger-top-invert {
+  0% {
+    top: 10px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  40% {
+    top: 10px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  60% {
+    top: 10px; }
+  100% {
+    top: 0; } }
+
+@-webkit-keyframes burger-bottom-invert {
+  0% {
+    bottom: 10px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  40% {
+    bottom: 10px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  60% {
+    bottom: 10px; }
+  100% {
+    bottom: 0; } }
+
+@keyframes burger-bottom-invert {
+  0% {
+    bottom: 10px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  40% {
+    bottom: 10px;
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  60% {
+    bottom: 10px; }
+  100% {
+    bottom: 0; } }
 
 .header {
   height: 100vh;

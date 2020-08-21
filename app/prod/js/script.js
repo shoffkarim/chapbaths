@@ -147,6 +147,13 @@ document.querySelector('.burger-wrapper').addEventListener('click', function () 
   let nav = document.querySelector('.nav');
   let menu = document.querySelector('.js-menu');
   let body = document.querySelector('body');
+  if(btn.classList.contains('js-burger')){
+    btn.classList.add('js-burger-close');
+    setTimeout(function() {
+      btn.classList.remove('js-burger', 'js-burger-close')
+    }, 1000)
+  }
+
   if(document.body.clientWidth > 1050) {
     btn.classList.toggle('js-burger')
     menu.classList.toggle('js-menu-open');
@@ -157,6 +164,7 @@ document.querySelector('.burger-wrapper').addEventListener('click', function () 
     menu.classList.toggle('js-menu-open');
     body.classList.toggle('js-body-overflow');
   }
+
 })
 
 document.querySelector('.cookie__btn.agree').addEventListener('click', function(){
