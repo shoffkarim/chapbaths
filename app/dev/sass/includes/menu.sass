@@ -99,6 +99,10 @@
         -webkit-transition: all 0.4s
         -o-transition: all 0.4s
         transition: all 0.4s
+      &.js-burger
+        &:hover
+          -webkit-animation: burger-rotate 2s linear infinite
+          animation: burger-rotate 2s linear infinite
       &.js-burger-close
         &::after
           -webkit-animation: burger-bottom-invert 1s ease-in-out forwards
@@ -375,3 +379,27 @@
     bottom: 10px
   100%
     bottom: 0
+
+@-webkit-keyframes burger-rotate
+  0%
+    transform: rotate(0deg)
+  25%
+    transform: rotate(90deg)
+  50%
+    transform: rotate(180deg)
+  75%
+    transform: rotate(270deg)
+  100%
+    transform: rotate(360deg)
+
+@keyframes burger-rotate
+  0%
+    transform: rotate(0deg)
+  25%
+    transform: rotate(90deg)
+  50%
+    transform: rotate(180deg)
+  75%
+    transform: rotate(270deg)
+  100%
+    transform: rotate(360deg)
