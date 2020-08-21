@@ -998,30 +998,47 @@
 
 .services {
   background-color: #2d2727;
-  height: 100vh; }
+  height: 100vh;
+  overflow: hidden; }
   .services .wrapper {
     margin-left: 0;
     padding-left: 150px;
     padding-right: 0px;
     display: flex;
     flex-direction: row;
-    height: 100%; }
+    height: 100%;
+    position: relative; }
 
 .service {
   background-repeat: no-repeat;
   background-size: cover;
   width: 50%;
   height: 100%;
-  padding-left: 139px;
-  padding-right: 140px;
-  padding-bottom: 55px;
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   transition: all 1s; }
+  .service__text {
+    z-index: 1; }
+  .service__left-photo {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 960px;
+    height: 1118px;
+    z-index: 0;
+    transition: all 0.4s; }
+  .service__right-photo {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 960px;
+    height: 1118px;
+    z-index: 0;
+    transition: all 0.4s; }
   .service:hover {
-    width: 75%;
-    transition: all 1s; }
+    width: 60%; }
     .service:hover .service-menu {
       opacity: 1;
       transition: all 0.4s; }
@@ -1031,7 +1048,8 @@
     line-height: 64px;
     color: #ffffff;
     text-align: center;
-    margin-top: 425px; }
+    margin-top: 425px;
+    z-index: 1; }
     .service__name:nth-child(2) {
       margin-top: 384px; }
   .service__desc {
@@ -1042,7 +1060,8 @@
     text-align: center;
     max-width: 320px;
     margin: 0 auto;
-    margin-top: 33px; }
+    margin-top: 33px;
+    z-index: 1; }
   .service-menu {
     display: flex;
     flex-direction: row;
@@ -1050,7 +1069,8 @@
     margin-top: auto;
     margin-bottom: 0;
     opacity: 0;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    z-index: 1; }
     .service-menu__item a {
       font-size: 24px;
       font-family: "ArnoPro-Display", sans-serif;

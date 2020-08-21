@@ -2,6 +2,7 @@
 .services
   background-color: $bac-color
   height: 100vh
+  overflow: hidden
   .wrapper
     margin-left: 0
     padding-left: 150px
@@ -9,22 +10,38 @@
     display: flex
     flex-direction: row
     height: 100%
+    position: relative
 .service
   background-repeat: no-repeat
   background-size: cover
   width: 50%
   height: 100%
-  padding-left: 139px
-  padding-right: 140px
-  padding-bottom: 55px
   position: relative
   display: flex
   flex-direction: column
+  overflow: hidden
   transition: all 1s
+  &__text
+    z-index: 1
+  &__left-photo
+    position: absolute
+    top: 0
+    left: 0px
+    width: 960px
+    height: 1118px
+    z-index: 0
+    transition: all 0.4s
+  &__right-photo
+    position: absolute
+    top: 0
+    right: 0px
+    width: 960px
+    height: 1118px
+    z-index: 0
+    transition: all 0.4s
   &:hover
-    width: 75%
-    transition: all 1s
-    & .service-menu
+    width: 60%
+    .service-menu
       opacity: 1
       transition: all 0.4s
   &__name
@@ -34,6 +51,7 @@
     color: #ffffff
     text-align: center
     margin-top: 425px
+    z-index: 1
     &:nth-child(2)
       margin-top: 384px
   &__desc
@@ -45,6 +63,7 @@
     max-width: 320px
     margin: 0 auto
     margin-top: 33px
+    z-index: 1
   &-menu
     display: flex
     flex-direction: row
@@ -53,6 +72,7 @@
     margin-bottom: 0
     opacity: 0
     transition: all 0.4s
+    z-index: 1
     &__item
       a
         font-size: 24px

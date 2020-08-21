@@ -1,3 +1,4 @@
+
 let BathSwiper = new Swiper('.swiper-container', { //инициализация свайпера
   loop: true,
   speed: 600,
@@ -48,8 +49,8 @@ BathSwiper.on('slideChange', function () {
     nextSlide.classList.remove('js-slider-swipe');
   }, 100);
   setTimeout(() => {
-    let btnNext = document.querySelector('.bathslider .swiper-button-next'); //поставить в конпки название бань
-    let btnPrev = document.querySelector('.bathslider .swiper-button-prev');
+    let btnNext = document.querySelector('.bathslider .swiper-button-next span'); //поставить в конпки название бань
+    let btnPrev = document.querySelector('.bathslider .swiper-button-prev span');
     let nextSlide = document.querySelector('.bathslider .swiper-slide-next');
     let nextPrev = document.querySelector('.bathslider .swiper-slide-prev');
     let linkAbout = document.querySelector('.slider-links-list__item.more-info a');
@@ -60,14 +61,14 @@ BathSwiper.on('slideChange', function () {
   }, 500);
 });
 BathSwiper.on('transitionStart', function () {
-  let btnNext = document.querySelector('.bathslider .swiper-button-next');
-  let btnPrev = document.querySelector('.bathslider .swiper-button-prev');
+  let btnNext = document.querySelector('.bathslider .swiper-button-next span');
+  let btnPrev = document.querySelector('.bathslider .swiper-button-prev span');
   btnNext.classList.add('slider_btn-anim');
   btnPrev.classList.add('slider_btn-anim');
 });
 BathSwiper.on('transitionEnd', function () {
-  let btnNext = document.querySelector('.bathslider .swiper-button-next');
-  let btnPrev = document.querySelector('.bathslider .swiper-button-prev');
+  let btnNext = document.querySelector('.bathslider .swiper-button-next span');
+  let btnPrev = document.querySelector('.bathslider .swiper-button-prev span');
   btnNext.classList.remove('slider_btn-anim');
   btnPrev.classList.remove('slider_btn-anim');
 });
@@ -89,8 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
       el.innerText = i
       blockList.append(el);
     });
-    let btnNext = document.querySelector('.bathslider .swiper-button-next'); //поставить в конпки название бань
-    let btnPrev = document.querySelector('.bathslider .swiper-button-prev');
+    let btnNext = document.querySelector('.bathslider .swiper-button-next span'); //поставить в конпки название бань
+    let btnPrev = document.querySelector('.bathslider .swiper-button-prev span');
     let nextSlide = document.querySelector('.bathslider .swiper-slide-next');
     let nextPrev = document.querySelector('.bathslider .swiper-slide-prev');
     let linkAbout = document.querySelector('.slider-links-list__item.more-info a');
@@ -164,7 +165,11 @@ document.querySelector('.burger-wrapper').addEventListener('click', function () 
     menu.classList.toggle('js-menu-open');
     body.classList.toggle('js-body-overflow');
   }
-
+  if (pageYOffset > 400 && !menu.classList.contains('js-menu-open')) {
+    nav.classList.add('js-small-nav');
+  } else {
+    nav.classList.remove('js-small-nav');
+  }
 })
 
 document.querySelector('.cookie__btn.agree').addEventListener('click', function(){
@@ -182,3 +187,4 @@ document.querySelector('.cookie__btn.disagree__close').addEventListener('click',
   let cookiepopup = document.querySelector('.disagree-cookie');
   cookiepopup.classList.remove('disagree-open-popup');
 })
+
