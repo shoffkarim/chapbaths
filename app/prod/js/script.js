@@ -1,4 +1,8 @@
 
+
+setTimeout(() => {
+    document.querySelector('body').classList.remove('opening');
+}, 50);
 let BathSwiper = new Swiper('.swiper-container', { //инициализация свайпера
   loop: true,
   speed: 600,
@@ -73,6 +77,7 @@ BathSwiper.on('transitionEnd', function () {
   btnPrev.classList.remove('slider_btn-anim');
 });
 document.addEventListener("DOMContentLoaded", function () {
+
   if(document.querySelector('.bathslider')){ //вывод списка названий бань
     let sliderList = document.querySelectorAll('.slider-baths .slide');
     let dataArray = [];
@@ -187,4 +192,3 @@ document.querySelector('.cookie__btn.disagree__close').addEventListener('click',
   let cookiepopup = document.querySelector('.disagree-cookie');
   cookiepopup.classList.remove('disagree-open-popup');
 })
-

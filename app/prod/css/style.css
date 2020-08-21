@@ -145,9 +145,9 @@
   padding-top: 45px;
   padding-bottom: 40px;
   z-index: 101;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s; }
+  -webkit-transition: width 0.4s, height 2s 0.5s;
+  -o-transition: width 0.4s, height 2s 0.5s;
+  transition: width 0.4s, height 2s 0.5s; }
   .nav__contacts {
     font-family: "ArnoPro-Display", sans-serif;
     font-size: 18px;
@@ -543,7 +543,8 @@
 
 .header {
   height: 100vh;
-  position: relative; }
+  position: relative;
+  transition: all 1.5s 0.5s; }
   .header .wrapper {
     display: flex;
     flex-direction: column;
@@ -583,7 +584,12 @@
     justify-content: flex-end;
     align-items: center;
     bottom: 0;
-    right: 0; }
+    right: 0;
+    height: auto;
+    opacity: 1;
+    -webkit-transition: width 0.4s, height 2s 0.5s;
+    -o-transition: width 0.4s, height 2s 0.5s;
+    transition: width 0.4s, height 2s 0.5s; }
   .header-link {
     padding: 28px 60px; }
 
@@ -593,10 +599,14 @@
   top: 50%;
   left: 50%;
   min-height: 100%;
+  height: auto;
   min-width: 100%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transition: all 2s 0.5s;
+  -o-transition: all 2s 0.5s;
+  transition: all 2s 0.5s; }
 
 .slider-baths {
   background-color: #2d2727; }
@@ -1018,7 +1028,8 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: all 1s; }
+  transition: all 1s;
+  padding: 0 135px 60px 135px; }
   .service__text {
     z-index: 1; }
   .service__left-photo {
@@ -1039,9 +1050,38 @@
     transition: all 0.4s; }
   .service:hover {
     width: 60%; }
-    .service:hover .service-menu {
+    .service:hover .service-menu__item {
       opacity: 1;
-      transition: all 0.4s; }
+      transform: translate(0px, 0px);
+      transition: all 0.4s 0.3s; }
+      .service:hover .service-menu__item:first-child {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: all 0.4s 0.3s; }
+      .service:hover .service-menu__item:nth-child(2) {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: all 0.4s 0.4s; }
+      .service:hover .service-menu__item:nth-child(3) {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: all 0.4s 0.5s; }
+      .service:hover .service-menu__item:nth-child(4) {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: all 0.4s 0.6s; }
+      .service:hover .service-menu__item:nth-child(5) {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: all 0.4s 0.7s; }
+      .service:hover .service-menu__item:nth-child(6) {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: all 0.4s 0.8s; }
+      .service:hover .service-menu__item:nth-child(7) {
+        opacity: 1;
+        transform: translate(0px, 0px);
+        transition: all 0.4s 0.9s; }
   .service__name {
     font-family: "ArnoPro-Regular", sans-serif;
     font-size: 60px;
@@ -1049,6 +1089,10 @@
     color: #ffffff;
     text-align: center;
     margin-top: 425px;
+    max-width: 600px;
+    min-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 1; }
     .service__name:nth-child(2) {
       margin-top: 384px; }
@@ -1068,20 +1112,25 @@
     justify-content: space-between;
     margin-top: auto;
     margin-bottom: 0;
-    opacity: 0;
+    opacity: 1;
     transition: all 0.4s;
     z-index: 1; }
-    .service-menu__item a {
-      font-size: 24px;
-      font-family: "ArnoPro-Display", sans-serif;
-      line-height: 32px;
-      color: #ffffff;
-      padding-top: 15px;
-      border-top: 1px solid rgba(255, 255, 255, 0);
-      transition: border-top 0.4s; }
-      .service-menu__item a:hover {
-        border-top: 1px solid rgba(255, 255, 255, 0.25);
-        transition: border-top 0.4s; }
+    .service-menu__item {
+      opacity: 0;
+      transform: translate(0px, 10px);
+      transition: all 0.4s; }
+      .service-menu__item a {
+        font-size: 24px;
+        font-family: "ArnoPro-Display", sans-serif;
+        line-height: 32px;
+        color: #ffffff;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0);
+        transition: border-top 0.4s;
+        transition: margin-top 0.4s; }
+        .service-menu__item a:hover {
+          border-top: 1px solid rgba(255, 255, 255, 0.25);
+          transition: border-top 0.4s; }
 
 .banners {
   background-color: #2d2727;
@@ -2117,3 +2166,21 @@
     margin-top: 100px; }
   .activity-slide {
     max-width: 330px; } }
+
+.opening .content__video {
+  min-height: 0;
+  height: 0;
+  -webkit-transition: all 2s 0.5s;
+  -o-transition: all 2s 0.5s;
+  transition: all 2s 0.5s; }
+
+.opening .nav {
+  height: 0;
+  transition: all 1.5s 1s; }
+
+.opening .header__links {
+  height: 0;
+  opacity: 0;
+  -webkit-transition: all 2s 0.5s;
+  -o-transition: all 2s 0.5s;
+  transition: all 2s 0.5s; }

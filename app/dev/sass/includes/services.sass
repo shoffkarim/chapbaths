@@ -21,6 +21,7 @@
   flex-direction: column
   overflow: hidden
   transition: all 1s
+  padding: 0 135px 60px 135px
   &__text
     z-index: 1
   &__left-photo
@@ -42,8 +43,38 @@
   &:hover
     width: 60%
     .service-menu
-      opacity: 1
-      transition: all 0.4s
+      &__item
+        opacity: 1
+        transform: translate(0px, 0px)
+        transition: all 0.4s 0.3s
+        &:first-child
+          opacity: 1
+          transform: translate(0px, 0px)
+          transition: all 0.4s 0.3s
+        &:nth-child(2)
+          opacity: 1
+          transform: translate(0px, 0px)
+          transition: all 0.4s 0.4s
+        &:nth-child(3)
+          opacity: 1
+          transform: translate(0px, 0px)
+          transition: all 0.4s 0.5s
+        &:nth-child(4)
+          opacity: 1
+          transform: translate(0px, 0px)
+          transition: all 0.4s 0.6s
+        &:nth-child(5)
+          opacity: 1
+          transform: translate(0px, 0px)
+          transition: all 0.4s 0.7s
+        &:nth-child(6)
+          opacity: 1
+          transform: translate(0px, 0px)
+          transition: all 0.4s 0.8s
+        &:nth-child(7)
+          opacity: 1
+          transform: translate(0px, 0px)
+          transition: all 0.4s 0.9s
   &__name
     font-family: $armo-reg
     font-size: 60px
@@ -51,6 +82,10 @@
     color: #ffffff
     text-align: center
     margin-top: 425px
+    max-width: 600px
+    min-width: 600px
+    margin-left: auto
+    margin-right: auto
     z-index: 1
     &:nth-child(2)
       margin-top: 384px
@@ -70,10 +105,13 @@
     justify-content: space-between
     margin-top: auto
     margin-bottom: 0
-    opacity: 0
+    opacity: 1
     transition: all 0.4s
     z-index: 1
     &__item
+      opacity: 0
+      transform: translate(0px, 10px)
+      transition: all 0.4s
       a
         font-size: 24px
         font-family: $armo-display
@@ -82,6 +120,7 @@
         padding-top: 15px
         border-top: 1px solid rgba(255, 255, 255, 0)
         transition: border-top 0.4s
+        transition: margin-top 0.4s
         &:hover
           border-top: 1px solid rgba(255, 255, 255, 0.25)
           transition: border-top 0.4s
