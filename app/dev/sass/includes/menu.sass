@@ -13,9 +13,10 @@
   padding-top: 45px
   padding-bottom: 40px
   z-index: 101
-  -webkit-transition: width 0.4s, height 2s 0.5s
-  -o-transition: width 0.4s, height 2s 0.5s
-  transition: width 0.4s, height 2s 0.5s
+  -webkit-transition: width 0.4s
+  -o-transition: width 0.4s
+  transition: width 0.4s
+  animation: opening-nav 1s linear 0.3s
   &__contacts
     font-family: $armo-display
     font-size: 18px
@@ -252,7 +253,17 @@
   -webkit-transition: all 0.5s 1.3s
   -o-transition: all 0.5s 1.3s
   transition: all 0.5s 1.3s
-
+.nav__logo, .nav__menu, .nav__contacts, .header__tagline, .header__description
+  opacity: 1
+  -webkit-transition: all 0.5s 1.3s
+  -o-transition: all 0.5s 1.3s
+  transition: all 0.5s 1.3s
+.opening
+  .nav__logo, .nav__menu, .nav__contacts, .header__tagline, .header__description
+    opacity: 0
+    -webkit-transition: all 0.5s 1.3s
+    -o-transition: all 0.5s 1.3s
+    transition: all 0.5s 1.3s
 @-webkit-keyframes burger-hover
   0%
     width: 100%

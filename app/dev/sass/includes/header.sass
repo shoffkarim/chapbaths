@@ -27,6 +27,7 @@
     width: 100%
     text-align: center
     margin-bottom: 28px
+    animation: opening-opacity 1s ease 1s
   &__description
     font-size: 15px
     line-height: 25px
@@ -45,9 +46,10 @@
     right: 0
     height: auto
     opacity: 1
-    -webkit-transition: width 0.4s, height 2s 0.5s
-    -o-transition: width 0.4s, height 2s 0.5s
-    transition: width 0.4s, height 2s 0.5s
+    -webkit-transition: width 0.4s
+    -o-transition: width 0.4s
+    transition: width 0.4s
+    animation: opening-btns 1s 1.3s
   &-link
     padding: 28px 60px
 .content__video
@@ -64,3 +66,41 @@
   -webkit-transition: all 2s 0.5s
   -o-transition: all 2s 0.5s
   transition: all 2s 0.5s
+.header-container
+  height: 100%
+  animation: opening-video 1s linear
+
+@keyframes opening-video
+  0%
+    transform: translate(0px, -1005px)
+  100%
+    transform: translate(0px, 0px)
+@keyframes opening-nav
+  0%
+    height: 0
+    transition: all 0.2s
+  25%
+    height: 25%
+    transition: all 0.2s
+  50%
+    height: 50%
+    transition: all 0.2s
+  75%
+    height: 75%
+    transition: all 0.2s
+  100%
+    height: 100%
+    transition: all 0.2s
+@keyframes opening-opacity
+  0%
+    opacity: 0
+  25%
+    opacity: 0.25
+  50%
+    opacity: 0.5
+  75%
+    opacity: 0.75
+  100%
+    opacity: 1
+
+
