@@ -3,12 +3,12 @@
 setTimeout(() => {
     document.querySelector('body').classList.remove('opening');
 }, 50);
-setTimeout(() => {
-  let lazyPainterBlock = document.querySelector('.lazypainter');
-  let script = document.createElement('script');
-  script.setAttribute("src", "js/lazylinepainter.js");
-  lazyPainterBlock.append(script);
-}, 1000);
+// setTimeout(() => {
+//   let lazyPainterBlock = document.querySelector('.lazypainter');
+//   let script = document.createElement('script');
+//   script.setAttribute("src", "js/lazylinepainter.js");
+//   lazyPainterBlock.append(script);
+// }, 1000);
 let BathSwiper = new Swiper('.swiper-container', { //инициализация свайпера
   loop: true,
   speed: 600,
