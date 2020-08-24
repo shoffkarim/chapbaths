@@ -185,23 +185,25 @@
     </div>
   </article>
   <header class="header">
-    <video class="content__video" preload="" autoplay="autoplay" muted="muted" loop="loop" poster="img/main.png")>
-      <source src="video/video.mp4" type="video/mp4"></video>
-    <div class="wrapper">
-      <div class="header__text-container">
-        <h1 class="header__tagline">
-          Настоящий рай для ценителей традиций и легкого пара!
-        </h1>
-        <p class="header__description">
-          Уютные банные домики, оборудованные в лучших традициях русской
-          бани,&nbsp;встречают посетителей ароматом натурального сруба,
-          березовыми дровами,&nbsp;особой атмосферой исконного деревенского
-          парения.
-        </p>
-      </div>
-      <div class="header__links">
-        <a class="link header-link active" href="">Забронировать баню</a><a class="link header-link" href="">Календарь
-          мероприятий</a>
+    <div class="header-container">
+      <video class="content__video" preload="" autoplay="autoplay" muted="muted" loop="loop" poster="img/main.png")>
+        <source src="video/video.mp4" type="video/mp4"></video>
+      <div class="wrapper">
+        <div class="header__text-container">
+          <h1 class="header__tagline">
+            Настоящий рай для ценителей традиций и легкого пара!
+          </h1>
+          <p class="header__description">
+            Уютные банные домики, оборудованные в лучших традициях русской
+            бани,&nbsp;встречают посетителей ароматом натурального сруба,
+            березовыми дровами,&nbsp;особой атмосферой исконного деревенского
+            парения.
+          </p>
+        </div>
+        <div class="header__links">
+          <a class="link header-link active" href="">Забронировать баню</a><a class="link header-link" href="">Календарь
+            мероприятий</a>
+        </div>
       </div>
     </div>
   </header>
@@ -922,11 +924,15 @@
       </svg>
     </div>
   </section>
-  <!-- <script src="js/jquery-3.5.1.js"></script> -->
+  <script src="js/jquery-3.5.1.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/script.js"></script>
-  <!-- <script src="js/lazylinepainter.js"></script> -->
-  <script type="text/javascript">
+  <div class="lazypainter" style="display:none">
+    <!-- <script src="js/lazylinepainter.js" async></script> -->
+  </div>
+
+
+  <!-- <script type="text/javascript">
     (function(){
       document.onreadystatechange = () => {
         if (document.readyState === 'complete') {
@@ -942,7 +948,7 @@
         }
       }
     })();
-  </script>
+  </script> -->
   <script type="text/javascript">
     // Функция ymaps.ready() будет вызвана, когда
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
